@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 3
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_3"></A>
+<B><P>MINIMUM SYSTEM REQUIREMENTS</P>
+</B><P>CauseWay for Watcom C<SUP>++</SUP> and Assembly Language requires a 386SX based computer or better. The required operating environment is MS-DOS or PC-DOS 3.1 or higher, Windows 3.0 or higher, OS/2 2.0 and above, or compatible operating system that provides a DPMI or VCPI DOS environment. Watcom C<SUP>++</SUP> 9.5 or better is also required to use the Watcom C<SUP>++</SUP> components of CauseWay.</P>
+<P>DOS 3.3+ and a 386 machine or better are necessary to run CauseWay applications.</P>
+
+<B><P>CAUSEWAY MEMORY REQUIREMENTS</P>
+</B><P>The recommended minimum amount of total free physical memory for CauseWay applications is 500K total. 100-150K of this memory must be conventional DOS memory, the remainder may be extended memory. CauseWay applications can run in less memory, down to the 300K range, provided sufficient virtual (disk-based) memory is available, but application performance will decline significantly. More physical memory improves a program's performance, reducing virtual memory disk access overhead.</P>
+
+<B><P>OPERATING CAUSEWAY</P>
+</B><P>When using CauseWay, simply follow the standard edit-compile/assemble-link programming cycle familiar to C and assembly language programmers.</P>
+<P>Watcom users compiling with WCL386 need to add the switch <B>/l=CauseWay</B> to the command line. For example:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WCL386 /l=CauseWay myprog.c</P>
+</FONT><FONT SIZE=3><P>This switch can be automated by adding <B>/l#CauseWay</B> to the WCL386 environment variable, making CauseWay the default when compiling via WCL386.</P>
+<P>Watcom users linking with WLINK should add the statement<B> system CauseWay</B> to the link command. For example:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WLINK system CauseWay file myprog.obj</P>
+</FONT>
+
+<P><A HREF="page_4.htm">Next Page</A></P>
+<P><A HREF="page_2.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

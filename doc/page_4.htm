@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 4
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_4"></A>
+<P><FONT SIZE=3>Assembly language programmers should link together the application object modules (OBJ files) and any support libraries using the WL32 protected mode linker. The linker automatically adds the DOS extender to the resulting executable EXE file.</P>
+<P>When running the DOS-extended application, DOS first loads the CauseWay DOS extender in conventional memory. CauseWay establishes the protected mode environment, retrieves the application from the executable file -- loading it first into extended memory, then conventional memory if extended is exhausted, then virtual (disk-based) memory if conventional is exhausted -- sets up the application for execution, and finally passes control to the application to begin operation. No additional files are required to make your application run in 386 protected mode using the CauseWay DOS extender.</P>
+<B><P>CWSTUB.EXE</B> will execute stand-alone Watcom LE-format files in the same way as <B>DOS4GW.EXE</B> does if the full file name, including extension, is listed after CWSTUB, e.g. CWSTUB RUNME.EXE. CWSTUB will override the extender bound to the application EXE, if any, with the CauseWay DOS extender version in CWSTUB.EXE.</P>
+<B><P>DEBUGGING USING WD, THE WATCOM DEBUGGER</P>
+</B><P>To debug CauseWay programs with the Watcom debugger after installing the CauseWay files, simply use the /tr=crw command line option. For example:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WD /tr=cw myprog</P>
+</FONT><FONT SIZE=3><P>This process can be automated by adding /tr#cw to your WD environment variable. Use the SET <B>WD=tr#cw</B> command.</P>
+<P>By default, CauseWay uses a Ctrl-Alt keypress to interrupt the WD debugger, rather than the Print-Screen key. This can be changed to any two, three, or four keypress value by modifying the ASCII file <B>CWHELP.CFG</B> at the <I>BreakKeys</I> line. See comments in this file for further detail. Note that a single keypress value will not work properly.</P>
+</FONT>
+
+<P><A HREF="page_5.htm">Next Page</A></P>
+<P><A HREF="page_3.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

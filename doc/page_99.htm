@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 99
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_99"></A>
+<B><P>14 - Memory structures destroyed. Program terminated.</P>
+
+</B><P>Generated if internal memory management structures become corrupted. This is caused by the CauseWay application writing to memory regions that have not been allocated to it and is a bug in the application. Obtain a corrected version of the application to fix this error.</P>
+
+<B><P>15 - DOS reported an error while accessing swap file. Program terminated.</P>
+
+</B><P>Generated if any level of error is detected while accessing the swap file. The swap file has probably been deleted inadvertently by the application or perhaps marked as read-only.</P>
+
+<B><P>16 - Unsupported DOS function call. Program terminated.</P>
+
+</B><P>The CauseWay application attempted to use an obsolete DOS function which used file control blocks (FCBs). Use the file handle DOS functions in the application instead.</P>
+
+<B><P>WL32 WARNING MESSAGES</P>
+</B><P>Warning messages are displayed by the WL32 protected mode linker when it encounters a problem while linking a CauseWay application. Warning messages are nonfatal and therefore the link process is not terminated. Warning messages do not always indicate a problem which needs to be resolved: see the explanations below for further details on situations in which warnings may be ignored during the link process.</P>
+<B><P>Symbol defined more than once: &lt;symbol name&gt; Defined in &lt;filename&gt;, duplicated in &lt;filename&gt;</P>
+
+</B><P>This message appears if a program has two or more globally visible symbols with the same name. Rename or make private or local one of the symbols to solve this problem. Also, check for two or more occurrences of the same object module in the object module list. The first definition of the symbol has precedence over any definitions that may follow.</P>
+
+<P><A HREF="page_100.htm">Next Page</A></P>
+<P><A HREF="page_98.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

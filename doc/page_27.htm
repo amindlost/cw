@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 27
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_27"></A>
+<B><P>CONFIGURATION FILE EXAMPLES</P>
+</B><P>Three sample configuration definition files are included in the CauseWay package. MSLINK.DEF ignores or translates several Microsoft link options. WARPLINK.DEF ignores or translates several WarpLink options; RTLINK.DEF engages freeformat parsing and translates or ignores standard commands used by RTLink. The command lists in each configuration file are not exhaustive, but do cover the most commonly used commands and options by these, and compatible, linkers.</P>
+<P>Access definition files via the following format:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WL32 </FONT><FONT SIZE=2>/</FONT><FONT FACE="Courier" SIZE=2>lc:&lt;definitions file&gt; @&lt;link file&gt;</P>
+</FONT><FONT SIZE=3><P>For example, for the RTLink definitions configuration file use:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WL32 /lc:RTLINK.DEF @LINKFILE.LNK</P>
+</FONT><FONT SIZE=3><P><B>NOTES</B></P>
+<P>You may use the WL32 /wu option with a configuration file to identify options or commands which are being ignored by the linker, i.e. unknown options.</P>
+<P>The morphing ability allows you to set up link scripts that are extremely opaque and impossible for other linkers to interpret. For example, you might create a configuration file with the following morphing commands: </P>
+</FONT><FONT FACE="Courier" SIZE=3><P>FREEFORMAT</P>
+<P>/COW=/ex</P>
+<P>LINKTHISFILE=OBJNAME</P>
+<P>MYFILE3=OBJADD</P>
+<P>LINKTHISONETOO=OBJNAME</P>
+<P>HEREARELIBRARIES=LIBNAME</P>
+<P>IGNORE[THIS]*=NULL</P>
+<P>/DOESNOTHINGBUTIMPRESSIVEOPTION*=NULL</P>
+<P>@=IGNORE</P>
+<P>-=IGNORE</P>
+<P>"=IGNORE</P>
+<P>TheStackOfToday=/st:</P>
+<P>CREATE=EXENAME</P>
+<P>~=COMMENT</P>
+<P>/b=DEFAULT</P>
+
+<P><A HREF="page_28.htm">Next Page</A></P>
+<P><A HREF="page_26.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 113
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_113"></A>
+<B><P>Program Linear Load Address</B> follows Info Flags. This value is the executable's load address in linear memory. It corresponds to one of the linear memory block entries described later.</P>
+<P>In flat models, the EIP value minus the program linear load address is the address offset of the faulting location relative to the start of the program.</P>
+<P>Following Program Linear Load Address is a display of the next 128 byte values at the CS:EIP location when the exception occurred. These are the hexadecimal byte values of the CPU instructions at the time of the exception. 386 reference books or some debuggers can be used to reconstruct the instruction operation codes that correspond to these hexadecimal byte values.</P>
+<P>The SS:ESP displays follows CS:EIP. This display shows the last 128 bytes values stored on the CPU stack.</P>
+<P>SS:EBP is next. It shows 128 byte values of the current stack frame negatively and positively offset from the current EBP value. C and other high level language routines use the EBP register to reference parameters passed on the stack and this display can show which parameters were passed.</P>
+<P>The resource tracking details come next. Selectors are listed with the following headings:</P>
+<B><P>sel base limit type D mem count</P>
+</B><P>Where:</P>
+
+
+<B><P>Sel</B>&nbsp;&nbsp;Selector value.</P>
+
+<B><P>base</B>&nbsp;&nbsp;Linear base address of selector.</P>
+
+<B><P>limit</B>&nbsp;&nbsp;Limit of selector</P>
+<B><P>type</B>&nbsp;&nbsp;CODE or DATA.</P>
+
+<B><P>D</B>&nbsp;&nbsp;16 or 32 to signify segment D bit.</P>
+
+
+<B><P>mem</B>&nbsp;&nbsp;Y or N to indicate if the selector has a memory block associated with it.</P>
+<B><P>count</B>&nbsp;&nbsp;segment count in MAP file, xxxx if dynamically allocated.</P>
+
+
+
+<P>The selector list is finished off with a display of the total number of selectors allocated to the program. For example:</P>
+<P>Total selectors: 0107</P>
+<P>Linear memory blocks are listed following the selector list, and contain
+
+<P><A HREF="page_114.htm">Next Page</A></P>
+<P><A HREF="page_112.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

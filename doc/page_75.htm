@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 75
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_75"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 10:&nbsp;&nbsp;&nbsp;INTERRUPT SERVICES</B></FONT></P>
+<FONT SIZE=3><B><P>EXTENDED OR ALTERED INTERRUPT SERVICES</P>
+</B><P>The size of register used by CauseWay's extended or modified interrupt services depends on the limit of the selector. Extended 32-bit registers are used for 32-bit sized selectors and 16-bit registers are used for selectors within 16-bits. To reflect this, the convention of an [E] in brackets is used before a listed register when it must be a 32-bit value with a 32-bit selector and a 16-bit value with a 16-bit selector.</P>
+<P>Required registers that are not specified in this list should be set up in the same way as required for normal DOS real mode operation. For INT APIs that are not listed and require segemnt pointers, either handle them using the CauseWay IntXX function or create your own interrupt translation code.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>INT 10h</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>10h sub function 02h, [E]DX instead of DX.</P>
+<P>10h sub function 09h, [E]DX instead of DX.</P>
+<P>10h sub function 12h, [E]DX instead of DX.</P>
+<P>10h sub function 17h, [E]DX instead of DX.</P>
+<P>13h [E]BP instead of BP.</P>
+<P>1Ch sub function 01h, [E]BX instead of BX.</P>
+<P>1Ch sub function 02h, [E]BX instead of BX.</P>
+</FONT>
+
+<P><A HREF="page_76.htm">Next Page</A></P>
+<P><A HREF="page_74.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

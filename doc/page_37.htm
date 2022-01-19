@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 37
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_37"></A>
+<P>CauseWay loads DLLs when the program being loaded has references to external modules in the DLL. CauseWay searches the execution path for any DLL or EXE file (in that order) which has the proper internal module name. The module name is not used when searching. For example, a file named <B>USEME.DLL</B> contains a module named Spelling_Checker. The name of the module (Spelling_Checker) is set by the NAME option in your link file. If no NAME is specified, then the module's name will default to its file name without an extension. In this example, the module name would become USEME if no NAME is specified.</P>
+<P>Following is an overview of the standard link file commands used to create DLLs. You may also refer to the Watcom Documentation for a description of these commands.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>EXPORT function_name</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P><I>function_name</I> allows you to make a symbol (function name) available to other modules. It should be declared as a public symbol so that the linker can export it.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>IMPORT [local_name] module_name.function_name </P>
+<P>IMPORT [local_name] module_name.ordinal</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>The <I>local_name</I> parameter is optional. It is the symbol which the importing program references the function by, i.e. the symbol declared as external. If no local name is specified, then function_name is used.</P>
+<I><P>module_name</I> is the name of the module that contains the function. It is not the file name. IMPORT module names are resolved by searching DLL and EXE files for the correct module name.</P>
+<I><P>function_name</I> is the symbol by which the function is known in the EXPORTing module, i.e. the symbol that is declared as public.</P>
+
+<P><A HREF="page_38.htm">Next Page</A></P>
+<P><A HREF="page_36.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

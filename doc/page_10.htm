@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 10
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_10"></A>
+<B>DPMI</B><BLOCKQUOTE>Force DPMI rather than default VCPI usage whenever possible (recommended for 386^Max and BlueMax users). The memory manager must support DPMI or else this setting is ignored.
+</BLOCKQUOTE>
+
+<B>EXTALL</B><BLOCKQUOTE>Force CauseWay to use all extended memory and sub-allocate memory from the bottom up instead of the default top-down approach. This setting is most useful for processor intensive environments which have a small hardware CPU cache. Use of this setting means that no extended memory will be available for other programs while the application is loaded (including shelling to DOS).
+</BLOCKQUOTE>
+
+<B>HIMEM:<I>nnn</I></B><BLOCKQUOTE>Set maximum physical (conventional plus extended) memory that can be consumed by CauseWay. <I>nnn</I> is the decimal number of kilobytes that can be consumed. If memory allocation requests exceed this figure, CauseWay will use virtual memory, even if additional physical memory is present. If the HIMEM memory value exceeds available physical memory, then memory allocations operate normally. For example, HIMEM:2048 on a 4M machine would force virtual memory use after 2M of memory allocations (including loading the executable file). The remaining 2M of memory could be used by other applications while the CauseWay application is active.
+</BLOCKQUOTE>
+
+<B>LOWMEM:<I>nnn</I></B><BLOCKQUOTE>Set DOS (conventional) memory to restrict it from use by CauseWay. This memory is in addition to the default 32K low DOS memory block reserved by CauseWay for use by any applications which need to allocate DOS memory. <I>nnn</I> is the decimal number of kilobytes to reserve. If there is not enough conven- tional memory to satisfy the <I>nnn</I> request value, then CauseWay will leave all conventional memory free that is not required by the extender to operate. Note that this option does not guarantee the amount of free DOS memory, just how much needs to be free before CauseWay will consume DOS memory after exhausting all extended memory. For example, LOWMEM:200 will attempt to reserve 200K of DOS memory, even if CauseWay has exhausted all extended memory and is using conventional memory to fill memory allocation requests.
+</BLOCKQUOTE>
+
+<P><A HREF="page_11.htm">Next Page</A></P>
+<P><A HREF="page_9.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

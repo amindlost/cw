@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 18
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_18"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 4:&nbsp;&nbsp;&nbsp;CONFIGURATION FILES</B></FONT></P>
+</B><P><FONT SIZE=3>For maximum flexibility and ease of use, the assembly language linker, WL32, supports response or linker script morphing commands. Morphing capability allows WL32 to read the link or response files and scripts of any linker without changing those files to conform to WL32's commands and options. This capability includes support for both positional (e.g. Microsoft Link and TLink) and freeformat (e.g. RTLink) link files and scripts.</P>
+<B><P>SYNTAX</P>
+</B><P>To use the morphing feature, place the morphing commands in a linker configuration definitions file and specify the file to WL32 through the /lc:&lt;filename&gt; option. If a morphing command configuration definitions file is not found in the current directory, WL32 will look for the file in the directory containing WL32.EXE (i.e. the invocation path of WL32).</P>
+<P>With all morphing commands in a configuration file, case is significant and WL32 returns an error for a lowercase command. However, case is not significant for the <B>&lt;string&gt; </B>or<B> &lt;option&gt;</B> listing that is translated or morphed into an instruction understood by WL32. For example, <B>LIB=LIBNAME </B>and<B> lib=LIBNAME</B> are valid definition file lines, <B>LIB=libname </B>and<B> lib=libname</B> are not. Only one command may be made per linker definition file line.</P>
+<P>An asterisk (*) character placed at the end of the <B>&lt;string&gt;</B> instructs WL32 to ignore the entire response file or command line after processing <B>&lt;string&gt;.</B> This is commonly used to ignore characters after a superfluous command, such as MODULE.</P>
+<P>A plus (+) character placed at the end of the <B>&lt;string&gt;</B> instructs WL32 to ignore the rest of the current option or command text and parameters, rather than the rest of the line. This is commonly used to ignore options and commands which have variable parameters, but which are followed on the same line by other options and commands which you do not want to ignore.</P>
+<P>Brackets ([ and ]) in a <B>&lt;string&gt;</B> have special meaning. Characters within a bracket are optional when parsing <B>&lt;string&gt;.</B> If the bracketed text is not present, <B>&lt;string&gt;</B> will still be parsed and translated correctly to the proper command.</P>
+
+<P><A HREF="page_19.htm">Next Page</A></P>
+<P><A HREF="page_17.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 5
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_5"></A>
+<FONT SIZE=3><P><B>OPERATIONAL CONSIDERATIONS WHEN USING CAUSEWAY</B></P>
+<P>The TEMP, TMP, and CAUSEWAY=SWAP environment variables are used by CauseWay to determine where to build its virtual memory swap file when an application is not operating under Windows or OS/2 (Windows and OS/2 use their own virtual memory files). Since CauseWay has integrated virtual memory, disk space is considered part of total memory. If you use the TEMP, TMP, or SWAP environment variable to point to a small RAM disk or almost full disk, free memory will be affected accordingly. If virtual (disk-based) memory is less than physical (installed on machine) memory, Cause Way turns off virtual memory. On the other hand, if you have a disk 300M free, CauseWay will have no problem reporting 300M free memory to your program, provided that virtual memory is not inhibited or limited by the CAUSEWAY environment variable memory settings.</P>
+<P>Memory operates differently under Windows and OS/2. With OS/2, the DPMI setting for the session determines available memory. With Windows, available memory is the total of physical memory plus the swap file size less any memory already in use by Windows or another Windows application.</P>
+<P>When creating a VMM swap file at application startup under DOS, CauseWay builds a list of possible paths in order of priority. CauseWay the works through the list until one of the entries provides both a valid drive and path specification and sufficient free space to being operation. The first entry to succeed becomes the swap file drive with no further processing of the list. If CauseWay reaches the end of the list without finding a valid drive, it disables the virtual memory manager. The order of priority is CAUSEWAY=SWAP, TEMP, TMP, and application execution path.</P>
+<P>If endusers reboot the system or turn off power while executing a CauseWay application under DOS, a temporary file will be left on the system by CauseWay. This will usually be a zero length file unless the application was large enough to exceed physical memory and CauseWay had started using its virtual memory manager. The temporary file name is requested using standard DOS functions, meaning the name will vary with different versions of DOS. It typically is a mixture of letters and numbers with no extension, although .$$$ extension may be presented when operating under a network. Make sure you do not delete this temporary file while the CauseWay application is still active, as improper or erratic program operation, including lock-ups, may occur.</P>
+</P>
+
+<P><A HREF="page_6.htm">Next Page</A></P>
+<P><A HREF="page_4.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

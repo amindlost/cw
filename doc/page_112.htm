@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 112
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_112"></A>
+<P>Next comes the general register values which indicate the state of the program when the exception occurred. The significance of register values is entirely dependent on the program being run at the time. CS:EIP register values can help track down the problem area by pinpointing exactly where in the code the exception occurred. Other register values may help determine why the exception occurred. In particular, look for use of registers as memory indices with values beyond the limit of the associated selector.</P>
+<P>Next, the segment register values are displayed as a real selector value followed by the program relative value in bytes. If the second value is non-numeric (xxxxxxxx) then the segment register didn't contain a selector value allocated to the program at load time, although the value may be valid if it was dynamically allocated by the operating program. If there is a second value, it also appears in the program's WL32 .MAP file as the segment start address. This shows which segment a segment register is pointing to at the time of the exception. The CS (Code Segment) register points to the segment containing the code which is executing. The EIP register value indicates the offset within the CS segment where the exception occurred. With these two values, you can not only determine the segment, but the routine within the segment closest to where the exception occurred.</P>
+<P>Segment register values are also useful in determining why an exception occurred. One common error is using an invalid selector value in DS, ES, FS, or GS. A segment register value of zero does not automatically indicate problem, but will cause a GPF if used to read or write to memory. In particular, be highly suspicious of DS and ES segment register values of 0000-xxxxxxxx since they are constantly used by C<SUP>++</SUP> to read and write to memory. A zero value in DS or ES usually indicates a bad memory pointer passed to a routine.</P>
+<P>Next, the processor control register values are listed. These registers are unlikely to be of much use for debugging and will only be filled in when not running under a true DPMI server. For an exception 0Eh (page fault), CR2 is the linear address that was accessed for which no memory was mapped in. This may help track down the problem area.</P>
+<B><P>Info Flags</B>= comes next. This value is returned by CauseWay's Info API function. Check it against the documentation for Info in the <I>CauseWay</I> <I>API</I> chapter to determine some aspects of the environment in which the program was running when the exception occurred, e.g. whether a DPMI server was being used.</P>
+
+<P><A HREF="page_113.htm">Next Page</A></P>
+<P><A HREF="page_111.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

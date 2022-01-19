@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 32
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_32"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&nbsp;/m Create <B>M</B>AP file.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>The /m option creates a map file. This option is also set if a map file name is explicitly listed in a linker response file or command line.</P>
+<P>Map files contain the size, name, class, and count of segments in the created program, the name, time, and date created of the executable file, and the program entry point address. Map files list the names and addresses of public symbols in the program. This information is useful for debugging your program and identifying space requirements for each segment. The CauseWay debugger (CWD) can use map files to display symbolic addresses of the CauseWay executable file being debugged. Symbols are present in a .MAP file only if they are declared public in the module that defines the symbol.</P>
+<B><P>NOTE:</B> This option may noticeably affect WL32 link speed and should not be specified if it is not needed.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/nd Do not use <B>d</B>efault library <B>n</B>ames in object modules. </FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Most language compilers and assemblers embed the name of one or more runtime libraries directly into .OBJ files so that these libraries do not have to be explicitly specified in the linker command line or response file. These .LIB files are called the default libraries. You can prevent WL32 from using the embedded default libraries by using the /nd option. The /nd option allows you to link programs without automatically linking in default libraries. This may be useful when linking in replacement libraries or if you rename default libraries.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/nwd <B>N</B>o <B>w</B>arning on <B>d</B>uplicate symbols.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option directs WL32 not to return a warning when duplicate symbols are encountered during linking. This feature is available for use with replacement or third party libraries when you do not desire such warnings because more than one module resolves the same symbol. Remember that all such warnings are eliminated, so use this option with care. There may be circumstances in which a duplicate symbol warning is appropriate and useful. If you have any unexplained problems, remove the /nwd option and check that the duplicate symbol warnings are benign.</P></FONT>
+
+<P><A HREF="page_33.htm">Next Page</A></P>
+<P><A HREF="page_31.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

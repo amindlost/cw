@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 11
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_11"></A>
+<B>MAXMEM:<I>nn</I></B><BLOCKQUOTE>Set maximum linear address space provided by CauseWay. <I>nn</I> is the decimal number of <B>megabytes</B> of linear address space. This setting is similar to HIMEM except that it includes any virtual memory. For example, MAXMEM:32 on a 16M memory system restricts VMM disk space usage to 32M, even if more disk space is present. MAXMEM:8 on the same system would restrict the application to 8M of memory (all physical). Note that the setting is in megabytes, rather than kilobytes used in the LOWMEM and HIMEM options.
+</BLOCKQUOTE>
+
+<B>NAME:&lt;<I>filename</I>&gt;</B><BLOCKQUOTE>Set a name, without a pathspec, to use the virtual memory temporary swap file. To set a path for the swap file, use the CAUSEWAY=SWAP, TEMP, or TEMP. The filename must be valid, 12 characters or less. Additional characters are truncated or invalidate the filename, depending upon how DOS handles it (e.g., multiple periods make an invalid file name whereas a five-character extension is truncated to three). If the filename specified is invalid, CauseWay shuts off virtual memory. It makes no further attempts for a temporary file name. If a pre-existing file name is specified, CauseWay overwrites the file.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+In conjunction with the PRE setting, the NAME setting can be a very powerful tool. Not only can no clusters be lost due to reset/reboot, but the leftover temporary file can be forced to a known name and location. Erase the swap file prior to running the application or leave it as a "permanent" swap file for CauseWay.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+<B>NOTE:</B> In a multi-user or muti-CauseWay application situation, do not use the NAME setting unless it generates a unique file for each user and application. Otherwise, applications will be stepping on others' temporary files. Alternatively, use WARPWRAP to avoid a problem by burning in different file names or creating workstation-specific environment variable settings.
+</BLOCKQUOTE>
+
+<P><A HREF="page_12.htm">Next Page</A></P>
+<P><A HREF="page_10.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

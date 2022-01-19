@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 53
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_53"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMemLinear</B> Allocate a block of memory without a selector.</FONT></TD>
+</TR>
+</TABLE>
+
+
+
+
+<FONT SIZE=3><P>Inputs: AX = 0ff10h</P>
+<P>CX:DX = Size of block required in bytes.</P>
+<P>Outputs: Carry set on error else,</P>
+<P>SI:DI = Linear address of block allocated.</P>
+<P>Errors: If not enough memory is available to satisfy the request then this function returns carry set.</P>
+<P>Notes: Addresses returned by this function may be &gt;16M.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMemLinear32</B> Allocate a block of memory without a selector.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff11h</P>
+<P>ECX = Size of block required in bytes.</P>
+<P>Outputs: Carry set on error else,</P>
+<P>ESI = Linear address of block allocated.</P>
+<P>Errors: See GetMemLinear</P>
+<P>Notes: Addresses returned by this function may be &gt;16M.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMemNear</B> Allocate an application relative block of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+
+
+
+<FONT SIZE=3><P>Inputs: AX = 0ff16h</P>
+<P>EBX = Size of block required in bytes.</P>
+<P>Outputs: Carry set on error else,</P>
+<P>ESI = Application relative linear address of block allocated.</P>
+<P>Errors: If there is not enough memory available to satisfy the request then this function returns carry set.</P>
+<P>Notes: Addresses returned by this function are an offset from the start of the application's memory and are intended to be used with the NEAR memory model.</P>
+
+
+</FONT>
+
+<P><A HREF="page_54.htm">Next Page</A></P>
+<P><A HREF="page_52.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

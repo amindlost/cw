@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 35
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_35"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 6:&nbsp;&nbsp;&nbsp;USING THE FLAT AND NEAR MEMORY MODELS</B></FONT></P>
+<FONT SIZE=3><P>The flat and near memory models are available for assembly language programmers using WL32. Watcom developers already use a flat model when creating a DOS-extended application. (Watcom's native LE-format executables are themselves a flat memory model.)</P>
+<P>Flat and near are non-segmented memory models that allow accessing data and executing code anywhere within the 4G physical address region via a 32-bit offset without the need to use segment registers to point to the memory. In many respects, the memory models are identical to the small memory model well-known to C and assembly language programmers, but supporting a memory region of 4G rather than 64K.</P>
+<P>Flat memory model applications are created by linking with the /f option of WL32. Near memory model applications are created by declaring a single 32-bit segment with a combined type of Public and class of Near.</P>
+<P>When using flat model, all linear addresses directly map to the physical address specified. For example, writing to memory location 0B8000h will address video memory. Reading from memory locations in the 0FFF00h range will access ROM code.</P>
+<P>Generally speaking, flat is an improved version of the older near memory model supported in previous versions of CauseWay. Unlike near, flat supports multiple segments, mixing 16- and 32-bit segments, and direct linear memory addresses without translation. There is little reason to use the near memory model with the latest version of CauseWay. Flat supports all near memory model code without translation, including automatic handling of near-specific API functions.</P>
+<P>You may wish to study the flat assembly source code examples on the CauseWay distribution disk to better acquaint yourself with using this powerful programming memory model.</P>
+
+<P><A HREF="page_36.htm">Next Page</A></P>
+<P><A HREF="page_34.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

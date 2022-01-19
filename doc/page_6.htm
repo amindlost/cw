@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 6
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_6"></A>
+<P>Application startup times may increase significantly if the free physical memory is less than the executable size. In such cases, not only must the executable be loaded into physical memory, but a virtual memory file of the executable file size must also be built. This file holds the portions of the executable that do not fit into physical memory and which have not been recently requested. After startup is complete, the program will operate normally, paging to and from virtual memory as necessary.</P>
+<P>When using WL32 with assembly language, startup times may be improved by use of the /fl /Fast Load /option which supports an optimized load scheme. Fast Load cannot be used with the CWC compression utility and is not available with Watcom C<SUP>++</SUP> executable files.</P>
+<P>CauseWay automatically sets aside 32K of low DOS memory for allocation and use by developer routines via the GetMemDOS API function. The 32K memory block is available even if CauseWay needs to use virtual memory just to load an application. The set-aside amount can be increased by using the CAUSEWAY environment variable LOWMEM option, although the additional set-aside goal is not guaranteed to be reached if too little conventional memory is left for CauseWay’s operating requirements.</P>
+
+<P><A HREF="page_7.htm">Next Page</A></P>
+<P><A HREF="page_5.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

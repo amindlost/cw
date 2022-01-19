@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 40
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_40"></A>
+<P><B>LOAD TIME</B></P>
+<P>When using assembly language, link with the WL32 /FL fast load /option to significantly improve load time performance. Be sure that you have sufficient physical memory to hold the load image of an EXE file because virtual memory access during load time will impact load time performance.</P>
+<B><P>WATCOM C<SUP>++</SUP> KBHIT REPLACEMENT</P>
+</B><P>Two optimized replacement versions of the Watcom C++ runtime library kbhit() function are provided on the CauseWay distribution disk. The files are KBHITR.OBJ and KBHITS.OBJ for, respectively, register-based and stack-based calling conventions. Simply link in the kbhit() replacement file appropriate for your compile options. These replacement routines bypass the normal INT checking of the keyboard and directly inspect the keyboard buffer to see if a keypress is pending. These routines significantly reduce the overhead in tight processing loops, which perform many kbhit()'s per second, by avoiding the interrupt call associated with checking for keystrokes.</P>
+<P>Be aware that linking in the kbhitr or kbhits module means that the INT 28h idle call will not be made on kbhit() as normally occurs with the standard runtime library kbhit(). This may impact background processing in applications which depend on INT 28h idle calls, such as the DOS PRINT utility which performs printing in the background.</P>
+<B><P>WL32 LINKING OPTIONS</P>
+</B><P>To speed up the link performance of WL32, consider not using the /sy, the /i, or the /m options, and not creating a map file by specifying a map file name. The additional overhead introduced by these options slows down WL32 because of the extra file created or information displayed. Eliminating these options, if they are not needed, may improve linker performance.</P>
+<B><P>API DOS BUFFER SIZE</P>
+</B><P>If your CauseWay application reads and writes files using large amounts of data on one read or write pass, you may wish to consider increasing the size of the internal DOS memory transfer buffer used by CauseWay. Refer to the SetDOSTrans and GetDOSTrans functions in the <I>CauseWay API</I> chapter for more information.</P>
+
+<P><A HREF="page_41.htm">Next Page</A></P>
+<P><A HREF="page_39.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

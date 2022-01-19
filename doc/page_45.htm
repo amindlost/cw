@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 45
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_45"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>CodeSel</B> Make a selector execute/read type.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff05h</P>
+<P>BX = Selector</P>
+<P>CL= Default operation size. (0=16-bit,1=32-bit)</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX, this function returns with carry set.</P>
+<P>Notes: This functions allows a selector to be converted to a type suitable for execution.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>cwcInfo</B> Validate and get expanded length of CWC'ed file.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff2bh</P>
+<P>BX = file handle</P>
+<P>Outputs: Carry set if not a CWC'ed file else,</P>
+<P>ECX = expanded data size.</P>
+
+
+
+<P>Errors: If the file handle is for a file which has not been compressed by CWC, the function returns with carry set.</P>
+
+
+
+<P>Notes: The file pointer is not altered by this function.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>cwcLoad </B>Load/expand a CWC'ed data file into memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0fffbh</P>
+<P>BX = Source file handle</P>
+<P>ES:EDI = Destination memory</P>
+<P>Outputs: Carry set on error and EAX = error code else,</P>
+<P>ECX = expanded data length</P>
+<P>Errors: Error code 1 = Error during file access.</P>
+<P>Error code 2 = Bad data (invalid compression information)</P>
+<P>Error code 3 = Not a CWC'ed file.</P>
+
+<P>Notes: The source file's file pointer does not have to be at zero. A single file might be several CWC'ed files lumped together. The proper one will be loaded as long as the file pointer is moved to the right place before calling this function.</P>
+<P>If error codes 1 or 2 are reported, then the file pointer will be wherever it was last moved to by this function. For error code 3, the file pointer will be back at its original position on entry to this function. If no error occurs, then the file pointer will be moved to whatever comes after the compressed data.</P>
+
+</FONT>
+
+<P><A HREF="page_46.htm">Next Page</A></P>
+<P><A HREF="page_44.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

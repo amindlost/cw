@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 111
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_111"></A>
+<P>If there is only one address beginning with the number, you have located the offending routine. If there is more than one address, examine the EIP value in CW.ERR. The EIP value is located in the middle of the seventh line immediately following the "EIP=" text. This value is the offset in the segment where the exception occurred. Find the symbol in the address group which has an address value following the ":" that is closest to the EIP but does not exceed the EIP value. This name of the symbol is the name of the routine which generated the exception. To continue our example, if you have the following four symbols of address 0000205E in the first half of the address line in the map file :</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>0000205E:000008DC __DBFGOHOT</P>
+<P>0000205E:00000944 __DBFGOCOLD</P>
+<P>0000205E:00000986 __DBFGOTOID</P>
+<P>0000205E:00000AEE __DBFGOTOP</P>
+</FONT><FONT SIZE=3><P>and the EIP value is 00000953, the closest routine name that does not exceed the EIP value in the second half of the address line is __DBFGOCOLD. Therefore, the exception occurred in the __DBFGOCOLD routine.</P>
+<P>This method of locating the exception is not foolproof since it requires that the routine creating the exception in the program segment be declared public, but it should work for the majority of cases. </P>
+<B><P>SEQUENCE</P>
+</B><P>The first line in CW.ERR is the CauseWay copyright message including the version of CauseWay used in the program. The version number may prove useful in tracking down problems that have been addressed in later versions of CauseWay.</P>
+<P>The version is followed by the exception number and error code. These numbers, as well as all others in the CW.ERR file, are in hexadecimal. The values listed are those reported by the processor when the exception occurred. Detailed information about the significance of the values can be obtained in most 386 and above reference books. Typically the exception value will be 0DH, a General Protection Fault; 0CH, a stack fault usually due to stack overflow or underflow; or 0EH, a page fault due to improper memory reference. The error code is generally of little use for debugging purposes.</P>
+
+<P><A HREF="page_112.htm">Next Page</A></P>
+<P><A HREF="page_110.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

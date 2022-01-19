@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 33
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_33"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/st:&lt;size&gt; Set program <B>st</B>ack size in bytes.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option modifies the linked program's stack size. It overrides any default stack set by the program modules if the default stack is smaller than the size specified by the /st option. The value may range from 1 to 65535 bytes.</P>
+<P>If no stack is set by this option or by the program, a default 1K (1024 bytes) stack is created by WL32. Executable programs should always have a stack segment.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/sy Create <B>SY</B>M file for CWD debugger.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>The /sy option is only useful for operating a CauseWay application with the CWD debugger. When the option is set, WL32 creates a .SYM file that contains information on the public symbols within the application. When using MAP files that have many public symbols, CWD may take a long time to process all of the symbolic information. The .SYM contains this information in an optimized form and allows an application to load under CWD more quickly. CWD will first check for and use a .SYM file. If no .SYM file is available then it uses a .MAP file (if present) for symbolic information.</P>
+<P>SYM files also allow source-level debugging of assembly language files if the module is coupled with line numbers.</P>
+<P><B>NOTE:</B> This option may noticeably affect WL32 link speed and should not be specified if it is not needed.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/w1 <B>W</B>arnings generate exit code of <B>1</B>, not zero.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Unlike errors, warnings do not normally generate a non-zero exit code (also known as the DOS ERRORLEVEL or the return code) when WL32 finishes linking. When the /w1 option is used, warnings cause a exit code of 1 rather than 0 to be returned. This behavior can be useful when creating programs using make or batch files that need to detect warning conditions.</P>
+
+<P><A HREF="page_34.htm">Next Page</A></P>
+<P><A HREF="page_32.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

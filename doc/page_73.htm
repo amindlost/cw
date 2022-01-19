@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 73
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_73"></A>
+<B><P>API NOTES</P>
+</B><P>A fixed segment selector at 40h is always available to the application. This selector maps the real mode memory at 400h where most of the BIOS variables can be found. CauseWay also provides selectors at standard video addresses 0B000h, 0B800h and 0A000h in non-DPMI environments to ease conversion of real mode code.</P>
+<P>The environment variable block address in the Program Segment Prefix (PSP) is a valid protected mode selector. A valid protected mode selector:offset is also placed in the PSP at offset 34h for the file handle list pointer. Note that the default value in the program's PSP will point to the real mode PSP, not the protected mode PSP, even if the handle count is less than or equal to twenty. Code that makes use of the handle list should use the address at PSP+34h rather than assuming the list's position within the PSP. Also, when an application is operating non-DPMI conditions the handle table will have an entry for CauseWay's VMM swap file.</P>
+<P>DOS functions which use the obsolete file control blocks (FCBs) are not supported by CauseWay, although such support may be added by the developer.</P>
+<P>CauseWay applications should terminate using INT 21H function 4Ch. As with real mode operation, the error level passed to this function in the AL register is returned to the parent program or DOS.</P>
+<P>If a CauseWay application needs to terminate and stay resident (TSR), then INT 21H function 31h may be used. Unlike real mode operation, no memory value is required for this function. All memory owned by the application when the TSR function is issued remains the program's property. There is currently no way of removing the CauseWay application from memory once it becomes a TSR without rebooting the machine or using a third party TSR manager. However, a TSR manager will not automatically release extended memory allocated for the CauseWay TSR.</P>
+<P>Unhandled exceptions terminate the program with a register display dump to screen and a text file called CW.ERR. CW.ERR contains other potentially useful information about the state of the application when it terminated. Refer to the appendices for more information on the CW.ERR file information format.</P>
+
+<P><A HREF="page_74.htm">Next Page</A></P>
+<P><A HREF="page_72.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 57
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_57"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>IntXX </B>Simulate real mode interrupt.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff01h</P>
+<P>BL= Interrupt number.</P>
+<P>ES:[E]DI = Real mode register list.</P>
+<P>Outputs: Register list updated.</P>
+<P>Errors: None.</P>
+
+
+
+<P>Notes: The real mode register list referenced by ES:[E]DI should contain the register values you want passed to the real mode interrupt handler. CauseWay fills in the SS:SP and Flags values to ensure that legal values are used and the CS:IP entries are ignored. This function bypasses protected mode interrupt handlers and provides access to INT APIs that require segment pointers.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>Linear2Near</B> Convert linear address to application relative address.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff19h</P>
+<P>ESI = Linear address to convert.</P>
+<P>Outputs: ESI = Application relative linear address.</P>
+<P>Errors: None</P>
+</FONT>
+
+<P><A HREF="page_58.htm">Next Page</A></P>
+<P><A HREF="page_56.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

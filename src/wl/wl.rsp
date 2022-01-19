@@ -1,0 +1,7 @@
+/mx /as:1 machlink+mlsetup+mlgetarg+mlcredit+mlsum+mlclean+mlerror+
+mlpass1+mlpass1a+mlpass1b+mlpass1c+mlcomm+
+mlpass2+mlpass2a+mlpass2b+mlpass2c+mlpass2d+mlpass2e+
+mlimage1+mlimage2+mllib1+mllib2+mlmemory+mlshared+mlparse+mlmap+
+mlparovl+mlovl1+mlovlfil+mlovlres+mlclip+mlddl1+mlddl2+mlquick
+wl
+wl;

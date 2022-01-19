@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 80
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_80"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 12:&nbsp;&nbsp;&nbsp;CAUSEWAY FILE COMPRESSOR</B></FONT></P>
+<FONT SIZE=3><P>The CauseWay file compressor (CWC.EXE) compresses executable CauseWay applications to reduce their file size on disk. Space savings of 50% of the original exectuable file’s original size frequently occur.</P>
+<P>CWC is simple to use. Specify the name of executable file along with any valid parameters. The command line follows this format:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>CSC MTPROG [CWC OPTION]</P>
+</FONT><FONT SIZE=3><P>MYPROG indicates the name of the CauseWay executable file to be compressed. If no extension follows MYPROG. .EXE is appended.</P>
+<P>NOTE: CWC requires that an executable file be in 3P (CauseWay) format. If you are using Watcom C++, you must first translate the executable file to 3P format using the LE23 utility.</P>
+<B><P>CWC OPTION</P></B></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/D Treat input file as data</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option compresses the entire file without regard to making it an executable file. The file can be decompressed with the CWC option, /E, at the DOS command line or via the CauseWay cwcLoad API function at runtime.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/E Expand data file</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>The /E option expands a data file compressed with the CWC /D option. EXE files compressed with CWC are protected from decompression and will not expand using this option.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/L Literal string length</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>The /L option leaves a specified number of bytes left uncompressed at the beginning of a CWC file. Follow /L with the number of bytes to leave uncompressed in the file, e.g., /L200 will leave the first 200 bytes of a file uncompressed. This option is useful for keeping copyright messages uncompressed and readable with a file has otherwise compressed.</P></FONT>
+
+<P><A HREF="page_81.htm">Next Page</A></P>
+<P><A HREF="page_79.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

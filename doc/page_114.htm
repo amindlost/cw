@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 114
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_114"></A>
+the following headings:</P>
+<B><P>handle base length </P>
+</B><P>Where:</P>
+
+
+
+<B><P>handle</B>&nbsp;&nbsp;Linear memory [de]allocation uses handles to control the blocks. This field is the block's handle.</P>
+<B><P>base</B>&nbsp;&nbsp;Linear base address of the memory block.</P>
+
+<B><P>length</B>&nbsp;&nbsp;Length of the block in bytes.</P>
+
+
+
+
+<P>The linear memory list ends with a display of the total linear memory allocated to the program, the real (rounded to 4K pages) memory allocated in parentheses, and finally the total number of memory blocks. For example:</P>
+<P>Total Linear memory: 000FEAC9 (001AA000) in 00000103 blocks</P>
+<P>Entries in the selector list that have Y under "mem" should have a corresponding entry in the linear memory list.</P>
+<P>Linear memory locks are listed after the linear memory block list and contain the following headings:</P>
+<B><P>base length </P>
+</B><P>Where:</P>
+<B><P>base</B>&nbsp;&nbsp;Linear base of the locked region.</P>
+<B><P>limit</B>&nbsp;&nbsp;Length of the locked region.</P>
+
+
+
+<B><P>NOTE:</B>These values are passed by the program but the actual values have the base rounded down a page and the length rounded up a page to match 4K boundary restrictions on locking. The values are reported in CW.ERR without using a rounded format to make it easier to cross reference this list to the other lists in CW.ERR.</P>
+
+
+
+<P><A HREF="page_115.htm">Next Page</A></P>
+<P><A HREF="page_113.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

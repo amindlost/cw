@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 108
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_108"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Appendix A:&nbsp;&nbsp;&nbsp;Rules For Protected Mode Operation</B></FONT></P>
+<FONT SIZE=3><P>The following information covers additional restrictions for protected mode compatible code that are not present when writing real mode compatible code.</P>
+<P>Using protected mode rather than real mode requires following a few new programming rules to prevent processor faults from being generated, terminating the CauseWay application. These processor faults occur when an application breaks a protected mode programming rule.</P>
+<P>Use the following rules for programming in protected mode:</P>
+
+<P>1.A selector value (referred to as a segment value in real mode) loaded into a segment register references an area of memory that may occur anywhere within the machine's physical address space. The operating system can dynamically move this area of memory. Therefore, when dealing with selector values:</P>
+
+<P>a.Never use segment registers as general purpose registers that can be loaded with arbitrary values. Every time a segment register is loaded with a value the processor checks the validity of the selector value and generates a fault if it is invalid.</P>
+<P>b.Never perform segment arithmetic on a selector value. Segment arithmetic is usually performed in real mode code to either normalize a pointer, access a new paragraph of memory without changing an offset, or to access a single area of memory that is greater than 64K in size. Since a selector value is an index into a table which contains the actual memory addresses, addition or subtraction of different selector values is meaningless and gives no useful results. (There exist special cases where contiguous selector values can be added or subtracted from for useful effect, but detailing these cases exceed the scope of this manual.)</P>
+<P>c.Do not access data at an offset greater than the size of the associated selector. Attempts to do so result in a fault. This is one of the greatest strengths of protected mode because most obscure bugs in real mode code occur when a bad pointer value accesses the wrong area of memory, or when a buffer overflows and memory beyond the buffer is overwritten.</P>
+
+<P><A HREF="page_109.htm">Next Page</A></P>
+<P><A HREF="page_107.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

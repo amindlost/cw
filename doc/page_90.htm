@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 90
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_90"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 14:&nbsp;&nbsp;&nbsp;WARPWRAP</B></FONT></P>
+<FONT SIZE=3><P><B>ENVIRONMENT VARIABLE BURN-IN UTILITY</B></P>
+<P>WARPWRAP (WW.EXE) is a utility that allows control over the environment variables accessible by an EXE program and allows setting uninitialized conventional memory to a specific value upon program startup. Environment variables can be preset to a particular value, deleted if already present, or added if they do not already exist. The individual creating the EXE program controls these attributes, without enduser intervention or the need for batch files.</P>
+<P>WARPWRAP works by modifying an EXE file, adding code that is immediately called when the EXE file is loaded by DOS. It changes the program's environment variable block (if necessary) so that the block contains settings specified by the WARPWRAP user, and optionally sets uninitialized memory to a selected value. The code then transfers operation back to the original program. The enduser does not notice any difference from normal EXE operation. In effect, WARPWRAP "wraps" a seamless shell around the EXE file.</P>
+<B><P>USING WARPWRAP</P>
+</B><P>You can use WARPWRAP in two different ways. The simplest, but least powerful, is to specify one environment variable to be added, or replaced, on the command line along with the EXE file name to be modified. You simply use an exclamation point (!) followed by the environment variable setting. This format replaces only one environment variable much like the burn-in capabilities of other products.</P>
+<P>For example:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WW !COW=MOO MYPROG</P>
+</FONT><FONT SIZE=3><P>presents the environment variable setting COW=MOO to MYPROG.EXE as if the user had typed SET COW=MOO prior to running the program. If the environment variable COW previously existed and contained a different setting, for example COW=MILK, it would be changed to COW=MOO. If it did not previously exist, it would be created. No other environment variables are modified. Note that the .EXE extension on the EXE file name is optional.</P>
+
+<P><A HREF="page_91.htm">Next Page</A></P>
+<P><A HREF="page_89.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

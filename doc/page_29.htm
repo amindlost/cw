@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 29
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_29"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 5:&nbsp;&nbsp;&nbsp;WL32 OPTIONS</B></FONT></P>
+<FONT SIZE=3><P>WL32 options let you control how programs are linked and specify linker output while creating the programs. You can specify these linker options from the DOS command line, in a batch or make file, or in a response file. If you are using the optional morphing command feature described in the <I>Configuration Files</I> chapter, the options listed below may not appear the same as in your command line, response, batch, or make file. The formats listed in this chapter, however, are always valid.</P>
+<P>All options are case insensitive, e.g. both /b and /B refer to the beep when link is complete option. Type WL32 without parameters at the DOS command line to display a summary of linker options.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/b <B>B</B>eep the speaker at linker completion.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option causes WL32 to beep your speaker three times at the completion of the linking process by writing three Control-G characters to the standard output device.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/cs Perform <B>C</B>ase <B>S</B>ensitive symbols link.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option preserves case sensitivity when linking. If you need case sensitive symbols in your application, use the /cs option. This is generally only critical for nonassembly language programs and not always then.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/ds Set <B>D</B>S to <B>S</B>S at startup.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option sets the DS segment register to the SS segment register value at application startup, rather than the application's PSP. The /ds option is required for proper Watcom C/C++ flat model operation.</P>
+
+<P><A HREF="page_30.htm">Next Page</A></P>
+<P><A HREF="page_28.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

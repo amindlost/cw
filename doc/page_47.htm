@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 47
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_47"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>cwExec</B> Run another CauseWay program directly.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff24h</P>
+<P>DS:EDX = selector:offset of file name.</P>
+
+
+
+<P>ES:ESI = selector:offset of command line. </P>
+<P> First byte is length, then data.</P>
+<P>CX = environment selector, 0 to use copy of existing environment.</P>
+
+
+<P>Outputs: Carry set on error and AX = error code else,</P>
+<P>AL = ErrorLevel</P>
+<P>Errors: Error code 1 = DOS file access error.</P>
+<P>Error code 2 = Not a 3P (CauseWay format) file.</P>
+<P>Error code 3 = Not enough memory.</P>
+
+
+
+<P>Notes: Only the first byte of the command line, the length byte, has any significance to CauseWay, so the following data is not restricted to printable ASCII values. The command line is still stored in the PSP at offset 80h, however, so length remains limited to 127 bytes.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>cwLoad</B> Load another CauseWay program as an overlay, performing relocations, but not executing.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff2ah</P>
+<P>DX:EDX = selector:offset of file name.</P>
+<P>Outputs: Carry set on error and AX = error code else,</P>
+<P>CX:EDX = Entry CS:EIP</P>
+<P>BX:EAX = Entry SS:ESP</P>
+<P>SI = PSP selector</P>
+<P>Errors: Error code 1 = DOS file access error.</P>
+<P>Error code 2 = Not a 3P (CauseWay format) file.</P>
+<P>Error code 3 = Not enough memory.</P>
+
+
+<P>Notes: The PSP returned in SI can be passed to RelMem to release the loaded program's memory and selectors. Only the memory and selectors allocated during loading will be released, it is the program's responsibility to release any additional memory allocated while the program is running. Alternatively, if you pass the PSP value to INT 21h, AH = 50h before making additional memory requests and then reset to the original PSP, the memory allocated will be released when the PSP is released.</P>
+
+
+</FONT>
+
+<P><A HREF="page_48.htm">Next Page</A></P>
+<P><A HREF="page_46.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

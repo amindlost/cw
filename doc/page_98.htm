@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 98
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_98"></A>
+<B><P>09 - Unrecoverable exception. Program terminated.</P>
+
+</B><P>This is the standard General Protection Fault, or GPF, message. It is generated if a nonrecoverable exception occurs which suggests a bug in the application. Use the register dump displayed with this message along with the information in CW.ERR and the program's .MAP file to help track down the location and cause of the problem. (See Appendix B for information on interpreting CW.ERR information.)</P>
+
+<B><P>10 - Unable to find application to load.</P>
+
+</B><P>Generated if CauseWay is unable to find the application within the executable .EXE file. This situation indicates a corrupted file. Rebuild or obtain another copy of the application.</P>
+
+<B><P>11 - DOS reported error while accessing application.</P>
+
+</B><P>Generated if any kind of error is detected while accessing the CauseWay application executable file. This situation indicates a corrupted or missing file. Rebuild or obtain another copy of the application.</P>
+
+<B><P>12 - Not enough memory to load application.</P>
+
+</B><P>Generated if CauseWay is unable to provide enough memory to load the application. Free additional memory and/or disk space before running the application. Check for CAUSEWAY=SWAP, TEMP and TMP environment variables that point to a disk with little free space. If running under an operating system that provides DPMI per application, increase the application's DPMI allocation.</P>
+
+<B><P>13 - DPMI failed to switch to protected mode.</P>
+
+</B><P>Generated if the machine is using a DPMI server and it fails to switch to protected mode. If the DPMI server only supports multiple clients of the same type (either 16- or 32-bit) then the problem is probably that different types of applications are already being run. Remove the other type of DPMI application(s) before running the CauseWay application.</P>
+
+<P><A HREF="page_99.htm">Next Page</A></P>
+<P><A HREF="page_97.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

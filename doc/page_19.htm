@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 19
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_19"></A>
+<B><P>MORPHING COMMANDS</P>
+</B><P>All supported morphing commands and descriptions of their use follows:</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>//&lt;any text&gt;</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>The // command allows insertion of comments or temporary removal of a pre-existing command in the DEF file. All text on the line following // is ignored by WL32. The slashes must be placed at the beginning of a line.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;character&gt;=COMMENT</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify one character that WL32 recognizes as the beginning of a comment line in a linker response file. WL32 uses the pound sign (#) by default. This command allows changing comment recognition to another character. WL32 also recognizes // as a comment line in a linker response file.</P>
+<P>If more than one comment line character is listed in a configuration file, only the last one specified is used.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;WL32 option&gt;=DEFAULT</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify a WL32 option that is set by default. For example, using:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>/b=DEFAULT</P>
+</FONT><FONT SIZE=3><P>in a configuration file will cause WL32 to always beep at the end of the link process, even if the response file does not contain the /b option. Multiple DEFAULT morphing commands are supported by WL32.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;string&gt;=EXENAME</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify a string that instructs WL32 to begin parsing the</P>
+<P>executable file name when in free format mode. In most cases, use the following command line:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>OUTPUT=EXENAME</P></FONT>
+
+<P><A HREF="page_20.htm">Next Page</A></P>
+<P><A HREF="page_18.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

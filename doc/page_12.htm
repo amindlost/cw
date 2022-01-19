@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 12
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_12"></A>
+<B>NOEX</B><BLOCKQUOTE>Force CauseWay to not patch the INT 21h, function 4bh (EXEC) vector to turn off CauseWay’s INT 31h extensions when the EXEC function is called. CauseWay normally turns off support of its INT 31h extensions with an EXEC call to be well behaved and avoid conflicts with other extenders or programs which may add their own extensions to INT 31h. However, if your CauseWay extended application shells out to DOS and passes the shelled-to application a callback address pointing to a routine within the parent CauseWay application, the callback will not work properly if the protected mode code uses the CauseWay extensions. With the NOEX setting present, CauseWay still supports its INT 31h extensions for those users who need to operate with callbacks in this fashion. Be aware that when the NOEX setting is present, CauseWay is less "well-behaved" about other programs which might add their own INT 31h extensions.
+</BLOCKQUOTE>
+
+<B>NOVM</B><BLOCKQUOTE>Disable all virtual memory use by CauseWay. If physical memory is exhausted, CauseWay will fail further memory allocation requests.
+</BLOCKQUOTE>
+
+<P><A HREF="page_13.htm">Next Page</A></P>
+<P><A HREF="page_11.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

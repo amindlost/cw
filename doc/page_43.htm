@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 43
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_43"></A>
+<B><P>CAUSEWAY API</P>
+</B><P>CauseWay provides an API for C and assembly language programmers as an extension of the DPMI API via INT 31h. Including the file CW.INC allows easy access to this API through appropriately named functions. You may also call the CauseWay API directly with appropriate register setup.</P>
+<P>CauseWay also provides all of the DPMI 0.9 API services on systems without a true DPMI server.</P>
+<P>Some of the API services require pointers to a real mode register list. The format of this list follows:</P>
+<P>dword&nbsp;EDI</P>
+<P>dword&nbsp;ESI</P>
+<P>dword&nbsp;EBP</P>
+<P>dword&nbsp;Reserved</P>
+<P>dword&nbsp;EBX</P>
+<P>dword&nbsp;EDX</P>
+<P>dword&nbsp;ECX</P>
+<P>dword&nbsp;EAX</P>
+<P>word&nbsp;&nbsp;Flags</P>
+<P>word&nbsp;&nbsp;ES</P>
+<P>word&nbsp;&nbsp;DS</P>
+<P>word&nbsp;&nbsp;FS</P>
+<P>word&nbsp;&nbsp;GS</P>
+<P>word&nbsp;&nbsp;IP</P>
+<P>word&nbsp;&nbsp;CS</P>
+<P>word&nbsp;&nbsp;SP</P>
+<P>word&nbsp;&nbsp;SS</P>
+<P>The values are passed to the target routine without any interpretation of their contents. There is no need to set the high words of the extended register entries unless the target routine requires them.</P>
+
+<P><A HREF="page_44.htm">Next Page</A></P>
+<P><A HREF="page_42.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 16
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_16"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 3:&nbsp;&nbsp;&nbsp;RESPONSE FILES</B></FONT></P>
+</B><P><FONT SIZE=3>Rather than supplying option and file information to WL32 on the DOS command line, you can place the information in an ASCII text file, called a response file. Response files are often referred to as link files, command scripts, or script files. Use response files to ease repetitive linking tasks and to allow longer entries than can be typed on the DOS command line. There is no limit to the number of options and files you can list and there is no need to worry about introducing typing errors with each link.</P>
+<B><P>RESPONSE FILE FORMAT</P>
+</B><P>Use the following format for using a response file with WL32:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WL32 @FILENAME.EXT</P>
+</FONT><FONT SIZE=3><P>The at (@) symbol designates the file as a response file instead of a .OBJ file or .LIB .file. You may list more than one response file when linking and can nest one response file inside another. This allows one response file to specify other response files to be used by WL32 during the link process. Response files can be nested to a depth of ten levels, that is, a response file can specify another response file which in turn can specify another response file, up to a maximum of ten layers. Nesting response files is most useful when linking in the FREEFORMAT mode described in the <I>Configuration Files</I> chapter.</P>
+<P>The maximum line length for a response file is 253 characters. There is no restriction on total number of lines in a response file.</P>
+<B><P>USING A RESPONSE FILE</P>
+</B><P>A response file contains exactly what you would type after WL32 on the DOS command line. To break up a response file into several lines, use a plus sign at the end of a line containing lists of .OBJ and LIB files. A line that ends without a plus sign (+) or a comma (,) indicates a new file type in the subsequent line. </P>
+
+<P><A HREF="page_17.htm">Next Page</A></P>
+<P><A HREF="page_15.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

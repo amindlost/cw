@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 85
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_85"></A>
+<P>The chart on the following pages shows the keypress and functions for the CS:EIP window.</P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=8 WIDTH=390>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<P><B><FONT SIZE=1>Keypress</B></FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<B><FONT SIZE=1><P>Function</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>F1-User</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Displays the user/application screen.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>Alt-F1-Syms</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Toggle on and off display of symbols from .SYM or .MAP file.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>F2-Break</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Sets or resets a break point at the current view point.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>Alt-F2-HBr</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Sets a hardware breakpoint. Enter the address, size (b for byte, w for word, or d for dword) and type</P>
+<P>(e for execute, w for write, r for read). Hardware breakpoints will break and return control to the debugger when the specified condition has been met while an application executes. For example, TestVar,b,r will return control to CWD when the first byte at location TestVar has been read by a CPU instruction. TestVar,d,e will return control to CWD when any of the first four bytes at location TestVar are used to execute an instruction.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>F3-Goto</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Moves the display point to the expression specified when prompted. Expression used may contain symbols, numbers or registers. Segment and offset should be separated by a colon. For example, SS:ESP and DS:80h are both valid expressions. It is possible to specify both a register and a numeric/symbolic expression for the offset, e.g. EBP+10h, or two registers, e.g., DX:AX</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>Alt-F3-List</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Displays a sorted list of symbols. Highlight the symbol you want to move the display to and press enter. Symbols are listed with names on the left and values on the right. The C or D displayed adjacent to the value indicates the address type is CODE or DATA. A speed search is available by typing the desired symbol text. Backspacing to eliminate typed characters is supported.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>F4-Here</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Executes instructions until the current view position is reached.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>Alt-F4-Here</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Moves display position to current CS:EIP.</FONT></TD>
+</TR>
+<TR><TD WIDTH="23%" VALIGN="TOP">
+<FONT SIZE=1><P>F5-Data</FONT></TD>
+<TD WIDTH="77%" VALIGN="TOP">
+<FONT SIZE=1><P>Opens a data window with default assignments. CWD supports multiple data windows.</FONT></TD>
+</TR>
+</TABLE>
+
+<P><A HREF="page_86.htm">Next Page</A></P>
+<P><A HREF="page_84.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

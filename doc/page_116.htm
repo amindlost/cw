@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 116
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_116"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Appendix C:&nbsp;&nbsp;&nbsp;WL32 Segment Type Criteria</B></FONT></P>
+<FONT SIZE=3><P>The following information describes how WL32 assigns attributes to program segments.</P>
+<P>In protected mode, several attributes control the use of segments. The most important one depends upon whether the segment contains code, data, or stack. Unlike real mode, in protected mode a code segment must be execute-only or execute/read, and a data segment must be read-only or read/write. CauseWay creates code segments that are execute/read and data and stack segments which are read/write. (Future versions of CauseWay may include additional segment types.)</P>
+<P>WL32 uses the following selection criteria to determine and flag to the DOS extender a segment type that is executable code, read/write data, or stack. Asterisk (*) stands for a wildcard character that replaces zero or more characters of any type.</P>
+<P>Code Segment (all classes and names case sensitive) if:</P>
+<P>segment class *CODE</P>
+<P>segment class CO*, segment name CO*</P>
+<P>segment class MISC, segment name MISC</P>
+<P>segment class CLARION, segment name _CODE* </P>
+<P>segment class CLARION, segment name _CLA_MAIN* </P>
+<P>segment class CLARION, segment name *_BIN_SEG</P>
+<P>Stack Segment if:</P>
+<P>class *STACK, case sensitive</P>
+<P>Data Segment if:</P>
+<P>no match on Code or Stack segment types</P>
+
+<P><A HREF="page_117.htm">Next Page</A></P>
+<P><A HREF="page_115.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

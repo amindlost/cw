@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 14
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_14"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 2:&nbsp;&nbsp;&nbsp;WL32 LINKER</B></FONT></P>
+<P><B>USING WL32</B></P>
+<P>WL32 is used for creating DOS extended assembly language programs. It optionally can be used to link Watcom C object modules instead of WLINK, although full source debugging is not supported.</P>
+<P>Operate the WL32 protected mode linker from the DOS command line or a batch or make file. There are no menus and operating modes. Simply type WL32 followed by specific command options and one or more filenames. Using WL32 is similar to using Borland's TLink or Microsoft Link, although you may optionally make WL32 work like RTLink, PLink and other linkers of that style. (See the <I>Configuration Files</I> chapter for more details on modifying WL32's behavior.)</P>
+<P>Use the following format for running WL32 from the DOS prompt:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>WL32 [command options] OBJECT_FILES, [<I>program_file</I>],[<I>map_file</I>],[<I>library_files</I>]</P>
+</FONT><FONT SIZE=3><P>Items in brackets ([ ]) are optional. Do not actually type the brackets if you use the optional items. Replace command options with any of the WL32 options.</P>
+<I><P>OBJECT_FILES</I> indicates a list of one or more object module file names. WL32 uses a default extension of .OBJ for object module files if none is given. You can override the default extension by explicit use of a different extension in the file name.</P>
+<I><P>program_file</I> indicates the name of the executable file that WL32 creates as output. WL32 uses a default extension of .EXE for executable files if none is given. You can override the default extension by explicit use of a different extension in the file name. If no executable file name is listed, WL32 uses the first .OBJ file name with a .EXE extension as the executable file name.</P>
+<I><P>map_file</I> indicates the name of the map file WL32 creates that contains information about the executable file. WL32 uses a default extension of .MAP for s if none is given. You can override the default extension by explicit use of a different extension in the file name. If no map file name is listed and the /m option is specified, Wl32 uses the .EXE file name with a .MAP extension. If a map file name is not listed and the /m option is not used, a map file is not created.</P>
+
+<P><A HREF="page_15.htm">Next Page</A></P>
+<P><A HREF="page_13.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

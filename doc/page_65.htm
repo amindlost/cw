@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 65
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_65"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>ResMemLinear32</B> Resize a previously allocated block of memory without a selector.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff13h</P>
+<P>ESI = Linear address of block to resize.</P>
+<P>ECX = Size of block required in bytes.</P>
+<P>Outputs: Carry set on error else,</P>
+<P>ESI = New linear address of block.</P>
+<P>Errors: See ResMemLinear</P>
+
+
+
+<P>Notes: If the memory block cannot be expanded to the desired size, and a free block of sufficient size exists, the existing memory is copied to the free block and released. The new block is allocated in place of the old.</P>
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>ResMemNear</B> Resize a previously allocated application relative block of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff17h</P>
+<P>EBX = Size of block required in bytes.</P>
+<P>ESI = application relative linear address of block to resize</P>
+<P>Outputs: Carry set on error else,</P>
+<P>ESI = New application relative linear address of block.</P>
+
+
+
+<P>Errors: If the address passed in ESI is not a valid memory block or there is not enough memory available when expanding the block this function returns carry set.</P>
+<P>Notes: If the memory block cannot be expanded to the desired size, and a free block of sufficient size exists, the existing memory is copied to the free block and released. The new block is allocated in place of the old.</P>
+
+</FONT>
+
+<P><A HREF="page_66.htm">Next Page</A></P>
+<P><A HREF="page_64.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,151 @@
+CAUSEWAY WL32 LINKER SOURCE FILE DOCUMENTATION
+
+
+GENERAL AND LEGAL NOTES
+
+As of January 9, 2000, Michael Devore surrendered all his
+copyrights for CauseWay for Watcom C/C++ & Assembly Language and
+released it to the public domain. Runtime libraries for CauseWay
+for Clipper 5, CauseWay for Clarion 2.1, and the trap file
+source for Watcom retain their separate third party copyrights
+or are covered by nondisclosure agreements and are not part of
+the release of the CauseWay software to public domain.
+
+There is no support or warranty whatsoever for the released
+files.  Under no conditions will Michael Devore be held liable
+for damages arising out of use of, or inability to use, the
+CauseWay files. You may send Devore Software & Consulting e-mail
+to freesource@devoresoftware.com with any questions, but those
+questions will, of necessity, have lower priority than paid
+customer/client inquiries and development works in progress.
+Such questions may be answered only after a long delay or not at
+all. But, depending on workload, the nature and framing of the
+request, and ineffable intangibles, it is within the realm of
+possibility that they will be answered immediately.  The small
+minority of individuals who may feel that they deserve priority
+attention by calling, faxing, or sending questions to other
+e-mail addresses will probably be disappointed in the results,
+at best.
+
+This is a true public domain release.  It is not Yet Another
+Open Source licensing arrangement.  You as an individual or as a
+business entity may use the binary and source files in whatever
+manner you desire, INCLUDING for commercial purposes, without
+explicit credit or compensation to Michael Devore or Devore
+Software & Consulting.  If you make a million off the code, toss
+a few thousand at a deserving charity.  Or don't, it's your
+choice.
+
+
+COMMENTS ON THE SOURCE CODE
+
+The source code for the rest of the CauseWay DOS extender
+besides the WL32 linker is in a separate distribution. Look for
+CW349.ZIP.
+
+Read the READ.ME plus the Web FAQ, study well, and think hard
+before assuming direct contact is vital.  For those who wish to
+modify or re-use the source code, please remember that messing
+about with externally created source to a commercial DOS
+extender and linker is not for the faint-hearted nor for those
+not extremely well-versed in the arts of assembly language and
+protected mode.
+
+If you wish to rebuild the source files, rather than use the
+current binary release, you can do so using the batch files
+provided or create your own.
+
+The original files were assembled with MASM 6.11 or TASM 2.5.
+Linkers used are either Borland's TLink or WL32 itself.
+Microsoft's Link version 5.x should also work.
+
+
+DISTRIBUTION FILES
+
+Following is the full directory file list for WL32, with
+comments.
+
+Assembly Language source files:
+
+07/25/94  09:03P                12,058 WLBUFFER.ASM
+03/07/96  03:58A                33,473 WLCLIP.ASM
+03/16/96  02:14A                 4,394 WLCONV.ASM
+12/15/95  10:41P                25,395 WLERROR.ASM
+10/03/99  03:58P                20,691 WLFEED.ASM
+11/05/95  09:33P                31,390 WLFILE.ASM
+06/10/96  07:34A                 5,597 WLMAIN.ASM
+06/18/96  08:32A                41,047 WLMAP.ASM
+11/04/95  09:05P                 7,679 WLMEMORY.ASM
+10/24/97  12:34A                26,777 WLP1LIB.ASM
+12/11/97  12:05P                96,432 WLP1MOD.ASM
+05/15/96  04:34P                59,647 WLP1RES.ASM
+05/01/96  08:31P                 6,141 WLP2LIB.ASM
+11/26/96  07:22A               124,282 WLP2MOD.ASM
+12/07/93  07:37A                 2,929 WLP2RES.ASM
+12/02/96  06:29P                37,050 WLPARCON.ASM
+06/18/96  08:03A                80,357 WLPARSE.ASM
+10/01/99  02:28P                79,004 WLPROG.ASM
+12/13/93  06:01P                 5,710 WLSETUP.ASM
+07/31/96  09:45P                75,580 WLTABLE.ASM
+11/04/93  04:49P                 3,332 WLTERM.ASM
+
+Batch files used to build WL32.  TL32.BAT builds the Watcom
+C/C++ & Assembly Language version WL32.  CLARIT.BAT builds the
+Clarion-specific WL32.  CLIPIT.BAT builds the Clipper-specific
+WL32.  Other batch files use WL32 instead of TLink or assemble
+just one source file.  You may need to assemble some source
+files outsides of the batch files which do not have
+language-specific settings, e.g. WLTERM.ASM via, for example, ML
+/C WLTERM.ASM or using T.BAT.
+
+01/19/95  03:40A                   495 CLARIT.BAT
+11/06/95  03:49A                   807 CLIPIT.BAT
+12/02/96  07:05A                    49 DOALL.BAT
+03/16/96  03:16A                    66 T.BAT
+11/06/95  04:07A                    77 TCLIP.BAT
+03/16/96  03:07A                   721 TL32.BAT
+10/01/99  02:03P                   673 WL.BAT
+
+Used to set the dual mode bit of CauseWay for an old custom
+project we did for a client who needed a Clarion version which
+ran under a 32-bit DPMI host simultaneously with another 32-bit
+extended application.  Probably useless for most people other
+than as an example of bit-twiddling.
+
+06/11/96  03:25A                 1,007 DUALMODE.C
+
+CW.EXE will update the embedded extender for a CauseWay extended
+application via /U.  EXESPLIT splits off the extender image from
+the extended application image into FILE1.DSK (extender) and
+FILE2.DSK (application).  You can then use DOS command COPY /B
+to copy a different extender image onto the application image.
+WL32 is a linker executable built using a recent -- but not
+absolute latest -- version of the CauseWay DOS extender.  If you
+wish, you can use CW.EXE to update it to CauseWay extender
+version 3.49, use EXESPLIT with the CWSTUB.EXE or CW32.EXE from
+the other distribution packages, or use the latest WL32.EXE
+available in the binary distribution package.
+
+12/30/99  11:30P                58,241 CW.EXE
+12/27/93  12:36P                35,307 EXESPLIT.EXE
+10/03/99  03:58P                91,648 WL32.EXE
+
+Assembly language include files:
+
+06/18/94  06:31P                29,301 CW.INC
+06/18/96  08:01A                 3,030 WLDATA.INC
+12/02/96  06:25P                21,478 WLEQUATE.INC
+06/21/94  01:29A                 1,981 WLERRCOD.INC
+10/11/95  12:50P                 5,848 WLSYMTOK.INC
+
+This documentation file:
+
+01/09/00  xx:xxx                xxxxxx READ.ME
+
+Linker response files for Microsoft Link, TLink, or WL32 for
+building WL32.EXE:
+
+08/02/95  10:55A                   180 WL32.RSP
+05/14/94  06:23P                   189 WL32CLAR.RSP
+06/22/94  04:44P                   199 WL32CLIP.RSP
+10/01/99  02:05P                   182 WL32T.RSP

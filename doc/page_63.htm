@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 63
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_63"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>ResMemSO</B> Resize a block of memory allocated via GetMemSO.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff2dh</P>
+<P>SI:DI = Selector:offset of block to resize</P>
+<P>CX:DX = New size of block required in bytes</P>
+<P>Outputs: Carry set on error else,</P>
+<P>SI:DI = selector:offset of new memory block address.</P>
+
+
+
+<P>Errors: If an invalid selector:offset is passed in SI:DI or not enough memory is available when increasing the block size, then this function returns carry set.</P>
+<P>Notes: If the memory block cannot be resized in its current location, but a free block of memory of the new size exists, the memory is copied to a new block and the old one is released. The selector:offset will change if this occurs, so the SI:DI return value should be used to update all references and pointers to the memory block when this function is called.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>ResMem32</B> Resize a previously allocated block of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff0eh</P>
+<P>BX = Selector for block.</P>
+<P>ECX = New size of block required in bytes.</P>
+<P>Outputs: Carry set on error.</P>
+<P>Errors: See ResMem</P>
+
+
+
+<P>Notes: If the memory block cannot be resized in its current location, but a free block of memory of the new size exists, the memory is copied to a new block and the old one released. This is transparent to the application as long as only the selector originally allocated with GetMem is used to access the memory.</P>
+</FONT>
+
+<P><A HREF="page_64.htm">Next Page</A></P>
+<P><A HREF="page_62.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 92
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_92"></A>
+<B><P>WARPWRAP COMMANDS</P>
+</B><P>WARPWRAP recognizes the following six commands within a script definition file, in addition to the environment variable settings. All commands are preceded with a tilde (~).</P></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=8 WIDTH=396>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<P><FONT SIZE=1>~NEW</FONT></TD>
+<TD WIDTH="71%" VALIGN="TOP">
+<FONT SIZE=1><P>All environment variables on subsequent lines of the definition file are added to the EXE file environment block ONLY if they do not already exist. If the environment variable already exists, regardless of setting, no changes are made. ~NEW environment variables must have a setting or else WARPWRAP aborts with an error at the incorrect line. ~NEW stays in effect for all subsequent environment variables until a ~REPLACE or ~DELETE command is encountered.</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<FONT SIZE=1><P>~REPLACE</FONT></TD>
+<TD WIDTH="71%" VALIGN="TOP">
+<FONT SIZE=1><P>All environment variables on subsequent lines of the definition file are added to the EXE file environment block regardless of whether or not they already exist. If they already exist, they are replaced. ~REPLACE environment variables must have a setting or else WARPWRAP aborts with an error at the incorrect line. ~REPLACE stays in effect for all following environment variables until a ~NEW or ~DELETE command is encountered. ~REPLACE is the default condition in a definition file if no other command is present, as if the definitions file started with a ~REPLACE command.</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<FONT SIZE=1><P>~DELETE</FONT></TD>
+<TD WIDTH="71%" VALIGN="TOP">
+<FONT SIZE=1><P>All environment variables on subsequent lines of the definition file that match a pre-existing environment variable are removed from the EXE file environment block. If a ~DELETE environment variable is specified but does not exist, then the ~DELETE command is ignored for that variable without causing an error. ~DELETE environment variables must not have a setting or else WARPWRAP aborts with an error at the incorrect line. ~DELETE stays in effect for all following environment variables until a ~NEW or ~REPLACE command is encountered.</FONT></TD>
+</TR>
+</TABLE>
+
+<P><A HREF="page_93.htm">Next Page</A></P>
+<P><A HREF="page_91.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

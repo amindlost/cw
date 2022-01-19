@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 102
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_102"></A>
+<B><P>132 - Response files nested more than 10 levels deep in &lt;file name&gt;</P>
+
+</B><P>There is no limit to the number of response files you can supply to WL32 but there is a limit to how deeply they can be nested. This message indicates &lt;file name&gt; exceeds a nesting deeper than ten levels. Move the offending response files out of the tenth nesting level.</P>
+
+<B><P>133 - Allocate memory attempt failed. Probably out of virtual memory.</P>
+
+</B><P>This error is most often caused when CauseWay's virtual memory manager runs out of conventional and extended memory and disk space is very low. Free up more disk space or extended memory. When using Windows or OS/2, allocate more DPMI memory for the linking session. If you are using the CAUSEWAY=SWAP, TEMP or TMP environment variable, make sure it is not pointing to a disk with little free space.</P>
+
+<B><P>134 - Resize memory attempt failed. Probably out of virtual memory.</P>
+
+</B><P>WL32 failed to increase the memory associated with a previously allocated selector because there was no more memory available. This error is most often caused when CauseWay's virtual memory manager runs out of conventional and extended memory and disk space is very low. Free up more disk space or extended memory. If you are using an operating system that uses DPMI, make sure enough DPMI memory is allocated to your program. If you are using a TEMP or TMP environment variable, make sure it is not pointing to a disk with little free space.</P>
+
+<B><P>135 - At least one object module file must be specified when linking.</P>
+
+</B><P>One or more options and possibly an EXE file name, MAP file name, or library files were listed in the linker command line or response file. However, an object module was not listed. Supply at least one object module file name when linking.</P>
+
+<P><A HREF="page_103.htm">Next Page</A></P>
+<P><A HREF="page_101.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

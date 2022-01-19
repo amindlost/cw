@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 9
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_9"></A>
+<P>CAUSEWAY=SWAP environment variable setting.</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>SET TMP=C:\SWAP</P>
+</FONT><FONT SIZE=3><P>The example above directs the CauseWay DOS extended to create it swap file, if any, in the C:\SWAP directory. Since the WL32 linker itself contains the CauseWay DOS extender, you may use the TEMP or TMP settings to specify a swap file directory when linking applications.</P>
+<P>If no TEMP, TMP and CAUSEWAY==SWAP settings are present or are invalid, the current drive is used when creating a swap file. If free drive space is less than physical memory (extended and conventional) available at startup, then the DOS extender VMM is disabled, no swap file is created, and virtual memory is not available to the application.</P>
+<B><P>CAUSEWAY Environment Variable</P>
+</B><P>The CAUSEWAY environment variable controls operation of the DOS extender at application runtime. Eleven (11) options are supported, although they are ignored in a Window or OS/2 DPMI environment. Use any combination of the options in the following format:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>SET CAUSEWAY=[<I>setting_1</I>;][<I>setting_2</I>;][<I>setting_n</I>;]</P>
+</FONT><FONT SIZE=3><P>Items in brackets ([ ]) are optional. Do not actually type the brackets if you use the optional items. Items in italics should be replaced with actual values, separated by semicolons. Following is a description of the nine valid settings:</P>
+
+<B>BIG1</B><BLOCKQUOTE>Force CauseWay to use an alternate method to determine available extended memory under RAW memory environments (no DPMI host, no HIMEM.SYS loaded), allowing CauseWay to see more than 64M of memory on machines which do not support more than 64M under original INT 15h method. This method uses INT 15h function 0e801h to determine available extended memory, falling back to the original function if 0e801h fails. Note that old machines may not support this function and there is a slight chance that some older machines may not work if the BIG1 setting is used.
+</BLOCKQUOTE>
+
+<P><A HREF="page_10.htm">Next Page</A></P>
+<P><A HREF="page_8.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

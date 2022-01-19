@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 52
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_52"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMem32</B> Allocate a block of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff0ch</P>
+
+
+
+<P>ECX = Size of block required in bytes. (-1 to get maximum memory size)</P>
+
+
+
+<P>Outputs: Carry set on error else,</P>
+<P>BX = Selector to access the block with or if ECX was -1,</P>
+<P>ECX = size of largest block available.</P>
+<P>Errors: See GetMem</P>
+
+
+
+<P>Notes: This function allocates a block of extended (application) memory and allocates a selector with a suitable base and limit.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMemDOS</B> Allocate a region of DOS (conventional) memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff21h</P>
+
+
+
+<P>BX = Number of paragraphs (16 byte blocks) required.</P>
+
+<P>Outputs: Carry set on error and BX = largest block size,</P>
+
+
+
+
+<P>AX =DOS error else, </P>
+<P>AX = Initial real mode segment of allocated block</P>
+<P>DX = Initial selector for allocated block</P>
+
+
+
+<P>Errors: If there are not enough selectors or memory available then this function returns carry set.</P>
+<P>Notes: If the size of the block requested is greater than 64K bytes (BX &gt;1000h) then contiguous descriptors are allocated. If more than one descriptor is allowed under 32-bit applications, the limit of the first descriptor is set to the size of the entire block. All subsequent descriptors have a limit of 64K except for the final descriptor which has a limit of block size MOD 64K. For 16-bit applications, always set the limit of the first descriptor to 64K.</P>
+
+</FONT>
+
+<P><A HREF="page_53.htm">Next Page</A></P>
+<P><A HREF="page_51.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

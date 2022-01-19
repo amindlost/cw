@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 8
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_8"></A>
+<B><P>LIB Environment Variable</P>
+</B><P>The LIB environment variable contains the name of one or more directories that are used if WL32 does not find a library file in the current directory. The LIB environment variable is identical to the OBJ environment variable except WL32 searches for the library files with the LIB environment variable instead of searching for object module files.</P>
+<P>For example, assume your current directory is C:\ASMWORK. The following command lines DISPLAY.OBJ and DRIVER.OBJ with SA.LIB.</P>
+<P>W</FONT><FONT FACE="Courier" SIZE=3>L32 DISPLAY DRIVER,,,SA</P>
+</FONT><FONT SIZE=3><P>Without a LIB environment variable, if SA.LIB is not in the C:\ASMWORK directory, WL32 issues a DOS error 2 (file not found) error. To specify that library files may also be found in the \SA or \LIB directories, set the LIB environment variable as follows:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>SET LIB=\SA;\LIB</P>
+</FONT><FONT SIZE=3><P>In the example above, if LIB is not found in the C:\ASMWORK directory, WL32 searches the current drive’s \SA and \LIB directories for the library file. Of course, you may also place a drive specifier, such as C:\SA in the LIB environment variable setting to tell WL32 to search a particular drive’s directory for library files.</P>
+<B><P>NOTE:</B> If a library is explicitly given a path specification in the link file or command line, then WL32 will only search for the library file in the path specified. The LIB environment variable directories are searched only when a file is listed without an associated directory and WL32 does not find the file in the current directory.</P>
+<B><P>TEMP and TMP Environment Variables</P>
+</B><P>The TEMP and TMP environment variables specify the directory and drive where a swap file is built by CauseWay’s virtual memory manager (VMM) when operating under DOS. Windows and OS/2 provide their own memory management functions which override CauseWay’s use of the TEMP and TMP environment variables. The path indicated by TEMP will be used under DOS if both TEMP and TMP environment variables exist. Both settings are superseded by the</P>
+
+<P><A HREF="page_9.htm">Next Page</A></P>
+<P><A HREF="page_7.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

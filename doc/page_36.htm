@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 36
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_36"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 7:&nbsp;&nbsp;&nbsp;USING DLLS WITH CAUSEWAY &amp; WATCOM C<SUP>++</SUP></B></FONT></P>
+<FONT SIZE=3><P>It is recommended that you understand and familiarize yourself with the basic operation of Windows DLLs before using them with CauseWay under DOS. You should also study the DLL example code provided on the CauseWay distribution disk. The DLL example code file names begins with the characters DLL. The MAKEFILE file will build an example application using DLLs. Simply type: </P>
+<B><P>WMAKE</P>
+</B><P>after installing CauseWay, to build <B>DLLTEST.EXE.</P>
+<P>NOTE:</B> The DLL startup code has changed in versions 10.5a, 10.6, and above of Watcom C++. Different files must be used with DLLs using these Watcom versions. Use DLLR105A.OBJ for register-based parameter passing and DLLS105A.OBJ for stack-based parameter passing. To use these files either edit CWSYSTEM.LNK so that "libfile dllstrts" and "libfile dllstrtr" become "libfile dlls105a" and "libfile dllr105a" or rename the DLLR105A.OBJ and DLLS105A.OBJ files to DLLSTRTR.OBJ and DLLSTRTS.OBJ.</P>
+<P>DLL code should be compiled with the /s option to disable stack checking and the <B>/bd</B> option to generate DLL-suitable code. Specify a system type of <B>CWDLLR</B> for register-based parameter passing or <B>CWDLLS</B> for stack-based parameter passing.</P>
+<P>A DLL file is a standard EXE file with the following requirement: The program start address should be an initialization and termination function, rather than a main program entry point. The entry address will be called twice: Once after loading to allow the DLL to perform initialization and once just prior to the DLL being unloaded from memory to allow it to clean up for termination. Entry conditions are: register EAX=0 for initialization and register EAX=1 for termination. An initialization code return value of EAX=0 indicates no errors. A code of any other value indicates an error has occurred and loading should be terminated. If an error condition is returned, it is up to the DLL to display an error message, CauseWay will simply report a load error. The entry address is a FAR call, so the initialization code should use a RETF to return control to the calling program.</P>
+<P>A minimal DLL startup system is provided in the DLLSTRTR.OBJ (register-based) and the DLLSTRTS.OBJ (stack-based) files on the CauseWay distribution disk. Link with the NOD option to prevent the linker from using the standard startup code.</P>
+
+<P><A HREF="page_37.htm">Next Page</A></P>
+<P><A HREF="page_35.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

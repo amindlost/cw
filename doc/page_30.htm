@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 30
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_30"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/ex Create DOS <B>EX</B>E-format file.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option instructs WL32 to create a standard real mode DOS EXE- format file, similar to those created by non-DOS extended linkers such as TLink or Microsoft Link. Creating a standard DOS EXE-format file only works for programs which do not exceed the DOS memory limit when fully loaded into memory. Medium to large-sized programs which require a DOS extender or overlays probably will not work when linked using the /ex option.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/f Create <B>f</B>lat memory model executable.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option directs WL32 to create a flat memory model executable. See the <I>Using the Flat and Near Memory Models</I> chapter for more information on the flat memory model.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/fl Use <B>f</B>ast <B>l</B>oad EXE file DOS extender features.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option optimizes the load format of the executable so that it will load more quickly at startup. Fast load /has no effect on the application after it has begun execution. Startup times will decrease from 20-80% over applications that are not linked with fast load. You may not compress fast load executables with CWC since compression and the fast load format are incompatible.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/i Display link process <B>i</B>nformation.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option provides extensive information about WL32 while it is working. When this option is specified, WL32 displays the current file or library module being processed and the segments being written to the executable file, as well as identifying the start of major link phases.</P>
+<P>The /i option may help you troubleshoot any problems that occur when using WL32 by narrowing down where the trouble spot lies. Technical support frequently requests a redirected output of the link process using the /i option if you experience a problem with WL32.</P>
+<B><P>NOTE: </B>This option may noticeably affect WL32 link speed and should not be specified if it is not needed.</P></FONT>
+
+<P><A HREF="page_31.htm">Next Page</A></P>
+<P><A HREF="page_29.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

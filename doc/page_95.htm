@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 95
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_95"></A>
+<B><P>NOTES</P>
+</B><P>WARPWRAP typically ignores leading and trailing spaces, although they are not allowed within environment variable settings. The first of multiple commands or variables on the same line is parsed by WARPWRAP. The remainder are ignored.</P>
+<P>WARPWRAP looks for data at the very end of the EXE file. WARPWRAP will not operate correctly if another EXE-modifying program appends additional data at the end of the EXE file after WARPWRAP has processed the EXE file.</P>
+<P>Do not modify WW.EXE. Data is embedded in the WW.EXE file and any modification made to it leads to program failure.</P>
+<P>WARPWRAP contains several error-checking features. In the rare event that an EXE file is too small to hold the environment variable modifications and associated code, WARPWRAP aborts the process with an error. WARPWRAP checks for previous processing and aborts the process if an EXE file has already been processed by WARPWRAP. You cannot -- and would not want to -- process an EXE file more than once with WARPWRAP. To restore an EXE file to unprocessed status or to change the WARPWRAP environment variables and memory clearing information within an EXE file, you need to rebuild the EXE file. Usually rebuilding consists of relinking the program's object modules and libraries to a new EXE.</P>
+<P>WARPWRAP does not modify the master environment variable block that is changed at the DOS prompt. Only the environment variables inherited by running programs are modified.</P>
+<P>WARPWRAP and WARPWRAP-processed files only work under </P>
+<P>MS- DOS or PC-DOS version 3.0 and higher, or compatible operating systems.</P>
+<P>You must list any environment variables that contain quotes in a definition file rather than use the one string ! mode.</P>
+
+<P><A HREF="page_96.htm">Next Page</A></P>
+<P><A HREF="page_94.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

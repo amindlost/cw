@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 60
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_60"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelMem</B> Release memory allocated by either GetMem or GetMem32.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff0fh</P>
+<P>BX = Selector for block to release.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX or the memory was not allocated via GetMem or GetMem32, this function returns carry set.</P>
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelMemDOS</B> Release a block of DOS (conventional) memory allocated by GetMemDOS.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff23h</P>
+<P>DX = Selector of block to free.</P>
+<P>Outputs: Carry set on error and AX = DOS error code.</P>
+
+<P>Errors: If an invalid block is passed, this function returns carry set. </P>
+<P>Notes: All descriptors allocated for the memory block are automatically freed and therefore should not be accessed once the block is freed by this function.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelMemLinear</B> Release previously allocated block of memory (linear address).</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff14h</P>
+<P>SI:DI = Linear address of block to release.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If the address passed in SI:DI is not a valid memory block, this function returns carry set.</P>
+</FONT>
+
+<P><A HREF="page_61.htm">Next Page</A></P>
+<P><A HREF="page_59.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

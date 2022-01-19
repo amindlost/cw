@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 93
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_93"></A>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=8 WIDTH=396>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<P><FONT SIZE=1>~SAVECASE</FONT></TD>
+<TD WIDTH="71%" VALIGN="TOP">
+<FONT SIZE=1><P>Directs WARPWRAP to keep the exact case of all following environment variables. By default, all environment variables and their settings are changed to uppercase.</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<FONT SIZE=1><P>~NOSAVECASE</FONT></TD>
+<TD WIDTH="71%" VALIGN="TOP">
+<FONT SIZE=1><P>Restores WARPWRAP to the default method of changing environment variables and their setting to uppercase.</FONT></TD>
+</TR>
+<TR><TD WIDTH="29%" VALIGN="TOP">
+<FONT SIZE=1><P>~CLEAR </FONT></TD>
+<TD WIDTH="71%" VALIGN="TOP">
+<FONT SIZE=1><P>Clears all uninitialized conventional memory owned by the program to zero or the hexadecimal value optionally listed following the ~CLEAR command. If no value is listed, then zero is used. Conventional memory is initialized in 2-byte (word) increments, so the value may range from 0 to FFFF. Invalid values result in either a zero value or an overflow setting of unknown value that is used to clear memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Use a pound sign (#) at the beginning of any line in a definition file to create a comment line. Such lines are ignored by WARPWRAP when processing. Comment lines are useful for inserting remarks about the definition file.</P>
+<P>You can precede environment variables with the text SET and thus mimic the DOS prompt for setting environment variables. This is most useful if you want to set environment variables that match a WARPWRAP command without WARPWRAP interpreting the environment variable setting as a command.</P>
+<P>Script definition files and WARPWRAP itself are only necessary when modifying an EXE file. After an EXE file has been modified, it no longer requires any WARPWRAP files. The EXE file contains all code and data required to perform the tasks specified by the modified EXE file.</P>
+
+<P><A HREF="page_94.htm">Next Page</A></P>
+<P><A HREF="page_92.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

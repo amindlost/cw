@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 71
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_71"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>UserDump</B> Setup user-defined error buffer dump in CW.ERR</FONT></TD>
+</TR>
+</TABLE>
+
+
+<FONT SIZE=3><P>Inputs: AX = 0ff2fh</P>
+
+<P>ES:[E]DI -&gt; user buffer to display in CW.ERR</P>
+<P>CX = count of bytes to display from buffer in CW.ERR</P>
+<P>BL = 'A' if ASCII dump (non-binary display of bytes, control characters display as periods)</P>
+<P>BH = nonzero if preset ASCII buffer to word value, ignored for non-ASCII</P>
+<P>DX = word value to fill ASCII dump buffer if BH is nonzero, ignored for non-ASCII</P>
+
+<P>Outputs: Carry set on ASCII dump invalid buffer address.</P>
+
+<P>Errors: The user buffer must be a valid readable selector and offset value when this function is called or else the request is ignored and a carry flag condition is returned. If BH is set to nonzero to flag presetting the buffer bytes, the selector must be writable. Specifying a larger CX count than available buffer size will also return an error.</P>
+<P>Notes:  If the fill ASCII buffer condition is specified, any values previously in the buffer will be overwritten when this call is made.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>UserErrTerm </B>Call user error termination routine</FONT></TD>
+</TR>
+</TABLE>
+
+
+<FONT SIZE=3><P>Inputs: AX = 0ff31h</P>
+
+<P>CL = 0 if 16-bit termination routine</P>
+<P>CL = nonzero if 32-bit termination routine</P>
+<P>DS:[E]SI = user termination routine address. </P>
+<P> If DS is zero, the user termination routine call is removed. </P>
+<P>ES:[E]DI = Information dump buffer address, 104 bytes. If ES is zero, no information dump is performed.</P>
+
+<P>Outputs: None</P>
+<P>Errors: None</P>
+
+<P><A HREF="page_72.htm">Next Page</A></P>
+<P><A HREF="page_70.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

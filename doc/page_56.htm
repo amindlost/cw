@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 56
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_56"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetVect </B>Get Protected mode interrupt handler address.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0204h</P>
+<P>BL= Interrupt vector number.</P>
+<P>Outputs:  CX:[E]DX = selector:offset of handler.</P>
+<P>Errors:  None.</P>
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>Info </B>Get system selectors/flags.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff00h</P>
+
+
+
+
+<P>Outputs: AX = Selector for real mode segment address of 00000h, 4G limit. </P>
+<P>BX = Selector for current PSP segment. 100h limit.</P>
+<P>[E]CX = DOS transfer buffer size. Always &lt;64K. </P>
+<P>DX = DOS transfer buffer real mode segment address.</P>
+<P>ES:[E]SI = DOS transfer buffer address.</P>
+<P>ESI+ECX always &lt;64K</P>
+
+
+
+<P>EDI = System flags. Bits significant if set.</P>
+
+
+
+<P>0 - 32 bit code default.</P>
+<P>1 - Virtual memory manager functional.</P>
+<P>2 \ Mode, 0 - raw, 1 - VCPI, 2 - DPMI.</P>
+<P>3 /</P>
+<P>4 - DPMI available.</P>
+<P>5 - VCPI available.</P>
+<P>6 - No memory managers.</P>
+<P>7 - Descriptor table type. 0 - GDT, 1 - LDT.</P>
+<P>Errors: None</P>
+
+
+<P>Notes: Bits 1-2 of DI indicate the interface type being used by CauseWay.</P>
+<P>Bits 4-5 indicate the interface types that are available. Bit 7 indicates the descriptor table being used to allocate selectors to the application when on a raw/VCPI system. The DOS transfer buffer is the area CauseWay uses to transfer data between conventional and extended memory during DOS interrupts. This memory can be used as temporary work space to access real mode code as long as you remember it may be overwritten the next time you issue an INT in protected mode that requires segment pointers.</P>
+
+
+</FONT>
+
+<P><A HREF="page_57.htm">Next Page</A></P>
+<P><A HREF="page_55.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 96
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_96"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 15:&nbsp;&nbsp;&nbsp;TROUBLESHOOTING</B></FONT></P>
+<FONT SIZE=3><P><B>FIRST STEPS</P>
+</B><P>If you have problems using CauseWay, first try linking and running a one-line program that simply prints "Hello" on your computer screen. This will help establish if the problem is a basic incompatibility with CauseWay and your system setup, or if the error may lie elsewhere (e.g. a third party library). Please report your results when contacting technical support for further help. As a first step to resolving a problem, technical support usually requests your link or response file, a MAP file (WL32 /m option), and the CW.ERR file if any. Technical support frequently requests detailed information about the machine environment that is having the problem.</P>
+<P>The remainder of this chapter provides a description of error and warning messages that you may encounter when using CauseWay. Suggested solutions to correct the errors are included where possible.</P>
+
+<B><P>DOS EXTENDER ERROR MESSAGES AND RETURN VALUES</P>
+</B><P>DOS extender error messages are displayed by the CauseWay DOS extender when a CauseWay application is running and encounters a serious problem that it cannot recover from. The DOS extender then terminates the application with the appropriate return code, displaying a dump of register values, and writing system information to the file CW.ERR. The WL32 linker itself is a CauseWay application and some of these errors can occur when using WL32 to link your application if the error condition is present.</P>
+<B><P>01 - Unable to resize program memory block.</P>
+
+</B><P>Generated if DOS reports an error when CauseWay tries to resize its real mode memory block. As the block is always shrunk, the only possible cause of this is corrupted memory control blocks (MCBs). Reboot the system to correct this error.</P>
+
+<B><P>02 - 386 or better required.</P>
+
+</B><P>Generated if CauseWay is run on any machine with a processor below a 386SX. To correct this error, run the application on another machine or upgrade the machine's processor.</P>
+
+<P><A HREF="page_97.htm">Next Page</A></P>
+<P><A HREF="page_95.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 41
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_41"></A>
+<P>Note that the internal 8K buffer is optimized for file transfers. Average file transfers of greater than 8K will not necessarily improve performance with an increase in the buffer size. Generally speaking, the average file transfer must be 32K or larger to gain any efficiency with an increased buffer size. Also, if you are using virtual memory, increasing the buffer size may actually slow down performance due to the decreased available physical memory. Test your application with both the default buffer and the desired new buffer size before permanently increasing the buffer size beyond the default.</P>
+<B><P>API MEMORY ALLOCATION</P>
+</B><P>Inveterate tweakers may try out the SetMCBMax and GetMCBSize functions in the CauseWay API. These functions allow fine-tuning of the threshold used by CauseWay to allocate memory via a memory pool using memory control blocks (MCBs) rather than via normal DPMI functions. Since DPMI allocates memory in multiples of 4K, setting the MCB threshold too low may result in a good deal of wasted memory and subsequent performance degradation.</P>
+
+<P><A HREF="page_42.htm">Next Page</A></P>
+<P><A HREF="page_40.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 82
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_82"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 13:&nbsp;&nbsp;&nbsp;CAUSEWAY SYMBOLIC DEBUGGER</B></FONT></P>
+<FONT SIZE=3><P>The CauseWay symbolic debugger consists of two files, CWD.EXE and CWD.OVL. To use the debugger, CWD.OVL and CWD.EXE must be in the same directory. To operate CWD, use the following format on the command line:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>CWD [CWD OPTIONS] MYPROG [MYPROG COMMAND LINE]</P>
+</FONT><FONT SIZE=3><P>MYPROG indicates the CauseWay application to be debugged with CWD. Any commands specified on the command line after MYPROG are passed to MYPROG as normal. Specify any CWD options before the CauseWay application name, MYPROG in the above example.</P>
+<P>CWD searches the CauseWay application's .SYM or .MAP file, MYPROG.SYM or MYPROG.MAP in the above example, for a list of symbols. .SYM files are created by linking the CauseWay application with WL32's /sy option. .MAP files are created by linking with WL32's /m option or specifying a map file name when linking.</P>
+<P>CWD will find .SYM and .MAP files only if they are present in the current directory. CWD checks first for a .SYM file, then for a .MAP file if no .SYM file is found. When using .MAP files that have many public symbols, CWD may take a long time to process all of the symbolic information, causing delayed load times. The .SYM file contains symbolic information in an optimized form and allows much quicker CWD loading.</P>
+<P>Symbols will be displayed by the debugger when they match a code routine or data variable address to improve readability of your application. The CauseWay debugger only supports symbols found in a .SYM or .MAP file. Symbols are present in a .SYM or .MAP file only if they are declared public in the module that defines the symbol. CWD supports source-level debugging of assembly language files when a SYM file is created by WL32 using the /SY option.</P>
+<P>If you are using Watcom and wish to use CWD with WLINK MAP files, a small utility called WMAPCWD is included on the distribution disk. WMAPCWD will convert WLINK MAP files to a format readable by the CauseWay CWD debugger. The utility includes the C source code in WMAPCWD.C, the executable as WMAPCWD.EXE, and a documentation text file WMAPCWD.TXT.</P>
+
+<P><A HREF="page_83.htm">Next Page</A></P>
+<P><A HREF="page_81.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

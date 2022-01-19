@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 23
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_23"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;file name&gt;=OBJADD</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify an object module to be linked into a program whenever the configuration file is used. This file is added as soon as the command is encountered in the configuration file. Therefore if you list the configuration file before any object modules and do not specify an EXE file name, the EXE file name is based on the object module file name in the first OBJADD command. If the object module is not present in the current directory and cannot be found using the OBJ environment variable, WL32 terminates with a file not found error.</P>
+<P>Multiple OBJADD morphing commands are supported by WL32.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;file name&gt;=OBJAPPEND</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify an object module file or files that is to be linked at the end of the object module list, rather than at the beginning as with OBJADD. </P>
+<P>If the object module is not present in the current directory and cannot be found using the OBJ environment variable, WL32 terminates with a <B>file not found</B> error.</P>
+<P>Multiple OBJAPPEND morphing commands are supported by WL32.</P>
+
+<P><A HREF="page_24.htm">Next Page</A></P>
+<P><A HREF="page_22.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

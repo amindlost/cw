@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 66
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_66"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>SetDOSTrans</B> Set new address and size of the buffer used for DOS memory transfers.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff26h</P>
+<P>BX = Real mode segment of buffer.</P>
+<P>DX = Protected mode selector for buffer.</P>
+<P>ECX = Buffer size (should be &lt;=64K)</P>
+<P>Outputs: None</P>
+<P>Errors: None</P>
+
+
+
+<P>Notes: The buffer must be in conventional memory and only the first 64K will be used even if a bigger buffer is specified. CauseWay will automatically restore the previous buffer setting when the application terminates but GetDOSTrans can be used to get the current buffer's settings if you only want the change to be temporary.</P>
+<P>You can still use the default buffer for your own purposes even after setting a new address.</P>
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>SetDump</B> Disable/enable error display and CW.ERR creation</FONT></TD>
+</TR>
+</TABLE>
+
+
+
+
+
+<FONT SIZE=3><P>Inputs: AX = 0ff30h</P>
+
+<P>CL = 0 if disable error display and CW.ERR file</P>
+<P>CL = nonzero if enable error display and CW.ERR file</P>
+
+<P>Outputs: None</P>
+<P>Errors: None</P>
+
+<P>Notes: By default, register dump display to screen and CW.ERR file creation are enabled on CPU faults. This option may be used to turn on and off CauseWay error processing output any number of times within an application.</P>
+
+</FONT>
+
+<P><A HREF="page_67.htm">Next Page</A></P>
+<P><A HREF="page_65.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

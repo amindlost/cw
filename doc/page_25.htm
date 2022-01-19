@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 25
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_25"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;string&gt;=&lt;WL32 option&gt;</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Translate &lt;string&gt; to the listed WL32 option. This command is most useful for a linker response file that has an option directly corresponding to a WL32 option, but with a different syntax. Here are a few common examples:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>STACK=</FONT><FONT SIZE=2>/</FONT><FONT FACE="Courier" SIZE=2>st:</P>
+<P>VERBOSE=</FONT><FONT SIZE=3>/</FONT><FONT FACE="Courier" SIZE=2>i</P>
+<P>/nod=</FONT><FONT SIZE=3>/</FONT><FONT FACE="Courier" SIZE=2>nd</P>
+</FONT><FONT SIZE=3><P>Multiple WL32 option morphing commands are supported by WL32.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;filename&gt;=+&lt;WL32 option&gt;</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Turn on &lt;WL32 option&gt; if &lt;filename&gt; is encountered in the link file as an object module or library. A path specification is not necessary for &lt;filename&gt;. </P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;filename&gt;=+OBJ:&lt;OBJ filename&gt;</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This command is the same as OBJAPPEND, except linking of &lt;OBJ filename&gt; is conditional based upon the presence of &lt;filename&gt;. Useful for linking in a path object module if a library is present. If no file extension is given for &lt;OBJfilename&gt;, the default is used: .OBJ.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;environment variable setting&gt;=@&lt;linkfile&gt;</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Process &lt;linkfile&gt; only if &lt;environment variable setting&gt; is properly set. Multiple &lt;linkfile&gt; commands are processed in order listed in the .DEF file following the initial command line, link file, and DEF file processing. This command is potentially very powerful and allows you to structure and control the link process almost entirely through the environment variable settings.</P>
+<P>Example:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>COW=MOO=@MILK.LNK</P>
+</FONT><FONT SIZE=3><P>In this example, WL32 will process MILK.LNK if the environment variable COW is set to MOO. Extraneous letters following the MOO setting will also match, i.e., SET COW=MOON will trigger MILK.LNK link file processing. Remember that the environment variables are case sensitive. SET COW=moo will not trigger MILK.LNK file processing.</P>
+<P>This command is most useful for FREEFORMAT link file processing, since it would be difficult to optionally process files and libraries in the positional link file format.</P>
+
+<P><A HREF="page_26.htm">Next Page</A></P>
+<P><A HREF="page_24.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

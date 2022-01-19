@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 26
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_26"></A>
+<B><P>NOTE</P>
+</B><P>Most morphing filename commands are not stackable. They match on the first command and any following command associated with that filename is ignored. Two morphing filename commands are stackable, FILEDELETE and ISLIB. This lets you delete a file and add a replacement automatically or specify that an object module is a library and still bring in a patch file. For example:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>CLD.LIB=ISLIB</P>
+<P>CLD.LIB=+OBJ:CWUSECLD</P>
+</FONT><FONT SIZE=3><P>will force CLD.LIB to be linked as a library and CWUSECLD.OBJ to be linked as an object module.</P>
+<P>The commands:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>DOS1.BOJ=+OBJ:CWDOS1.OBJ</P>
+<P>DOS1.BOJ=FILEDELETE</P>
+</FONT><FONT SIZE=3><P>will remove DOS1.BOJ from link processing and add CWDOS1.OBJ into link processing.</P>
+<P>Do <I>not</I> try to stack any other commands besides ISLIB and FILEDELETE. The second command will either be ignored or cause inappropriate behavior, and possibly a general protection fault (GPF) when linking with WL32.</P>
+
+<P><A HREF="page_27.htm">Next Page</A></P>
+<P><A HREF="page_25.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

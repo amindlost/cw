@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 51
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_51"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMCBSize </B>Get current memory control block (MCB) memory allocation block size.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff27h</P>
+<P>Outputs: ECX = Current threshold</P>
+<P>Errors: None</P>
+<P>Notes: See SetMCBMax</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetMem</B> Allocate a block of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff0bh</P>
+
+
+<P>CX:DX = Size of block required in bytes. (use -1:-1 to get maximum memory size)</P>
+
+
+<P>Outputs: Carry set on error else,</P>
+<P>BX = Selector to access the block with or if CX:DX was –1, CX:DX = size of largest block available.</P>
+
+
+
+<P>Errors: The amount of memory available is limited by physical memory present and free disk space of the drive being used by the VMM. If CauseWay is unable to find a large enough block this function returns carry set.</P>
+<P>Notes: This function allocates a block of extended (application) memory and allocates a selector with a suitable base and limit.</P>
+
+
+</FONT>
+
+<P><A HREF="page_52.htm">Next Page</A></P>
+<P><A HREF="page_50.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

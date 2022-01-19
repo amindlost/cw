@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 34
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_34"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/wu Issue <B>w</B>arning on <B>u</B>nknown linker options or commands.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>WL32 normally ignores without feedback an unknown linker option or command provided that the unknown text is not preceded by a slash (/). When the /wu option is set, all ignored text is listed by WL32 in a warning message. This option is most useful for detecting an unknown command or option if you are using morphing configuration files with the FREEFORMAT option.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>/zu <B>Z</B>ero fill <B>U</B>ninitialized segments.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This option zero fills uninitialized segments, including the stack. It is useful for applications which expect uninitialized data segments to be set to zero. Note that a stack segment must be present and at the end of the application for this to work. If for some reason the stack is located in the middle of an application, then only uninitialized segments up through the stack will be zero filled. Note that this option can increase program size significantly since all bytes in the program image are explicitly written, although CWC compression should bring it back down. Some Watcom C applications may require this option because they expect zero'ed uninitialized data segments.</P>
+
+<P><A HREF="page_35.htm">Next Page</A></P>
+<P><A HREF="page_33.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

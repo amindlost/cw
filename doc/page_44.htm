@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 44
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_44"></A>
+<B><P>STACK FRAMES</P>
+</B><P>Stack frames for 16-bit interrupts are the same as for real mode.</P>
+<P>The stack frame for 16-bit exceptions follows:</P>
+<P>word SS </P>
+<P>word SP - Original stack address</P>
+<P>word Flags </P>
+<P>word CS </P>
+<P>word IP - Original Flags:CS:IP values that caused the exception </P>
+<P>word Err Code - Processor supplied exception error code</P>
+<P>word CS </P>
+
+
+
+
+
+
+<P>word IP - Return address, returns to interrupt/exception</P>
+
+
+
+
+
+
+<P> dispatch code</P>
+<B><P>DEFAULT API</P>
+</B><P>The default CauseWay API follows. Functions that end in the text <B>near</B> are intended only for backwards compatibility with CauseWay's NEAR memory model. This model is now obsolete. The assembly language program include file <B>CW.INC</B> also contains the following list.</P>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>AliasSel</B> Create a read/write data selector from source selector.</TD>
+</FONT>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff06h</P>
+<P>BX = Source selector</P>
+<P>Outputs: Carry set on error else,</P>
+<P>AX = New data selector</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX, this function returns with carry set.</P>
+<P>Notes: This function always creates a read/write data selector regardless of the source selector type. It can be used to provide write access to variables in a code segment.</P>
+
+<P><A HREF="page_45.htm">Next Page</A></P>
+<P><A HREF="page_43.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

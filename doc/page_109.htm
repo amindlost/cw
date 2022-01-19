@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 109
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_109"></A>
+<P>d.Do not attempt to write to or read from the NULL (zero value) segment. Attempts to do so results in a fault. In addition to valid selector values, segment registers can be safely loaded with a value of 0 but this selector value cannot be used to access memory or execute code.</P>
+
+<P>2.Do not execute code in a data segment and do not write to data in the code segment. Use the CauseWay AliasSel function to map a data selector to the same physical memory area shared by a code selector when necessary. Even in this case, however, never write to memory using a CS: code segment override because it always causes a processor fault. </P>
+<P>3.CauseWay handles most of the standard DOS interrupts transparently. When passing pointers to buffers for software interrupt calls not handled by CauseWay, create the buffers in low (conventional) DOS memory using the GetMemDOS function of the CauseWay API. In addition, convert the pointers from protected mode selector:offset pairs to real mode segment:offset pairs prior to the interrupt, and back upon your return from the interrupt.</P>
+
+<P><A HREF="page_110.htm">Next Page</A></P>
+<P><A HREF="page_108.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

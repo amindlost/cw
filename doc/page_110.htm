@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 110
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_110"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Appendix B:&nbsp;&nbsp;&nbsp;CW.ERR File Information Format</B></FONT></P>
+<FONT SIZE=3><P>The following information describes the format of the CW.ERR file that CauseWay creates if an exception occurs in a CauseWay application. This information can be very useful in tracking down exactly where and why an exception occurred. Although cross-referenced information described here specifically applies to WL32's MAP file, most information can be cross-referenced to Watcom's WLINK MAP file with minor changes in detail.</P>
+<B><P>QUICK REFERENCE GUIDE</P>
+</B><P>If you do not know how to interpret assembly language or CPU instructions, and you want better detail on the location of an exception, you can frequently identify which routine caused the exception by cross-referencing the WL32 MAP file with the CW.ERR file. Following is a short guide to determine the offending routine.</P>
+<P>Look at the value after the dash (-) listed for the CS segment register at the beginning of the ninth line in CW.ERR. This should be an eight digit number starting with several zeros. Now look at the MAP file of your application (created by linking with the FREEFORMAT MAP command or WL32 /m option). Following the program, creation date and time lines in the MAP file is a listing of program segments showing their start, stop, length, name, class and count. Find the segment which has a start address equal to the eight digit number listed above. This is the entry for the program segment where the exception occurred.</P>
+<P>Locate the public symbols listed by address in the MAP file. Each symbol in the program is listed in ascending address order. The address is composed of two values separated by a colon (:). Find the address group which begins with the eight digit number given above for CS segment register without the last digit. For example, if the CS eight digit number was 000205E0, look for an address beginning with 0000205E. If you cannot find any addresses beginning with the number, either no routines in the segment were declared public or else you have a version of the MAP file that was created at a different time than the application EXE file which generated the CW.ERR file.</P>
+
+<P><A HREF="page_111.htm">Next Page</A></P>
+<P><A HREF="page_109.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

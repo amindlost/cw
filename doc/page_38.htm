@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 38
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_38"></A>
+<I><P>ordinal_number</I> functions can also be imported by number. This is the entry number in decimal, starting at 1, in the EXPORTing module's export table to link to. local_name must be specified when using ordinals, otherwise there is no symbolic reference to internally resolve.</P>
+<P>In the DLL calling code, local_name and function_name need to be declared as external.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>NAME module_name</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P><I>module_name</I> is a symbol by which the module should be identified when resolving IMPORT records in a calling program.</P>
+<P>IMPORTed module names can contain a partial path. For example, DLL\spelling_checker would instruct the loader to look in &lt;execution path&gt;\DLL for a module with a name of spelling_checker.</P>
+<B><P>NOTES:</P>
+</B><P>You must take the responsibility to make sure that the IMPORTed function or module calling conventions match the calling code. For example, the loader will load a 16-bit module to resolve an IMPORT in a 32-bit program without complaint. In this case, if the IMPORTing program does a 16-bit far call, then everything will work correctly, but a 32-bit call will fail unless the 16-bit DLL module ends with a 32-bit RET instruction.</P>
+<P>Importing by function name may slow your performance if the symbols are frequently referenced. In such cases, consider using the ordinal command to speed up the access times because module name references are automatically converted to ordinals in an internal list which will only be processed once at load time.</P>
+
+<P><A HREF="page_39.htm">Next Page</A></P>
+<P><A HREF="page_37.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

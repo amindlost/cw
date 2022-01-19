@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 83
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_83"></A>
+<P>CWD supports a configuration file, CWD.CFG, which modifies the operation of CWD. The configuration file supports four commands:</P>
+
+
+
+
+
+
+<P>SourcePath=<I>path;path</I>&nbsp;&nbsp;Directs CWD where to look for assembly language (.ASM) source files. CWD first looks in the current directory, then in any paths specified by this command. Separate different paths on the same command by placing a semicolon (;) between them. Multiple SourcePath commands are supported to append additional directories to the source path.</P>
+<P>SourceTab=<I>n1,n2,n3</I>&nbsp;&nbsp;Instructs CWD as to the TAB position to use for source code display.</P>
+<P>BreakKeys=<I>n1,n2</I>&nbsp;&nbsp;Instructs CWD as to the keycodes for the keypress which will stop execution of the program and return control to CWD. The codes are raw keyboard scan codes in decimal, up to four codes separated by commas. Do not use keyboard extended codes. CWD uses the code 29,56 (CTRL-ALT) by default if no Breakkeys command is specified.</P>
+<P>ResetTimer&nbsp;&nbsp;Instructs CWD to reset the hardware timer to normal value when exiting CWD. Some applications reprogram the timer interrupt. Dropping out of CWD in mid-program execution may leave the timer running at a higher than normal rate. Use this command to avoid such problems.</P>
+
+
+
+
+
+
+<B><P>NOTES</P>
+</B><P>Comments may be inserted into a configuration file by beginning the line with a semi colon (;).</P>
+<P>Refer to the sample CWD.CFG file on the CauseWay distribution disk for an example of configuration file commands.</P>
+<P>CWD will not load CWC-compressed files. This helps provide better third party security of proprietary code.</P>
+<P>CWD properly disassembles floating point emulation instructions.</P>
+
+<P><A HREF="page_84.htm">Next Page</A></P>
+<P><A HREF="page_82.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

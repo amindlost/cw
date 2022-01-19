@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 61
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_61"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelMemLinear32</B> Release previously allocated block of memory (linear address).</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff15h</P>
+<P>ESI = Linear address of block to release.</P>
+<P>Outputs: Carry set on error.</P>
+<P>Errors: See RelMemLinear</P>
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelMemNear</B> Release previously allocated application relative block</P>
+<P>of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff18h</P>
+<P>ESI = Application relative linear address of block to release.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If the address passed in ESI is not a valid memory block this function returns carry set.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelMemSO</B> Release a block of memory allocated via GetMemSO.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff2eh</P>
+<P>SI:DI = Selector:offset of block to release</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector:offset is passed in SI:DI or the memory was not allocated via GetMemSO, then this function returns carry set.</P>
+
+
+</FONT>
+
+<P><A HREF="page_62.htm">Next Page</A></P>
+<P><A HREF="page_60.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

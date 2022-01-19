@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 42
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_42"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 9:&nbsp;&nbsp;&nbsp;CAUSEWAY SERVICES</B></FONT></P>
+<FONT SIZE=3><P>The following information describes the services available through CauseWay for low-level protected mode compatible functions and interrupt servicing.</P>
+<P>The CauseWay services support both 16- and 32-bit selectors. Use of 32-bit selectors allows developers to directly access many megabytes of memory in a CauseWay program using only one selector value. In addition to the normal segment registers used in real mode programs, the additional segment registers FS and GS are always available for use by developers to access memory. Refer to a 386, 486, Pentium or similar CPU chip reference book for more information on 386+ level registers and instructions.</P>
+<B><P>INTERNAL OPERATION</P>
+</B><P>A valid protected mode selector:offset is placed in the PSP at offset 34h for the file handle list pointer. Note that the default value in the program's PSP will point to the real mode PSP, not the protected mode PSP, even if the handle count is less than or equal to twenty. Code that makes use of the handle list should use the address at PSP+34h rather than assuming the list's position within the PSP. Also, when an application is operating in non-DPMI conditions the handle table will have an entry for CauseWay's VMM swap file.</P>
+<P>The GetMem and GetMem32 calls with CX:DX and ECX set to -1 will report the largest free memory block, rather than total free memory. This value may be substantially lower than total free memory due to fragmentation of the linear memory blocks. Set CX to -1 (0FFFFH) and DX to -2 (0FFFEH) or ECX to -2 (0FFFFFFFEH) for GetMem and GetMem32, respectively, for the total free memory value.</P>
+<B><P>FUNCTIONS</P>
+</B><P>The CauseWay functions are based on the DPMI specification and offer additional enhancements. This means that several of the DPMI 1.0 functions are available to the CauseWay programmer in all systems providing access to lower level functions should you need them. All DPMI 0.9 functions are always available.</P>
+
+<P><A HREF="page_43.htm">Next Page</A></P>
+<P><A HREF="page_41.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

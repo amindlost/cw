@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 78
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_78"></A>
+<P>Hardware interrupts are always reflected to protected mode handlers even when signaled during real mode operations. This ensures that protected mode applications always retain control without requiring you to patch real mode interrupt vectors. The remaining interrupts are serviced via the vector table appropriate to the mode. Use the real to protected mode call-back services to provide real mode code with access to protected mode code, and allow any interrupt to be re-signaled in protected mode.</P>
+<P>If you add your own hardware interrupt handlers, suchas the timer tick at vector 08h, any memory that the handler reads or writes, including its code, must reside in locked memory. (CauseWay provides a locked stack.) This limitation is required because DOS is not re-entrant and hardware interrupts can occur at any time. Interrupts occurring during DOS activity prevent CauseWay’s virtual memory manager from accessing its swap file. Lock memory will not move to the swap file.</P>
+
+<P><A HREF="page_79.htm">Next Page</A></P>
+<P><A HREF="page_77.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 74
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_74"></A>
+<P>CauseWay runs applications at privilege level 3. Privilege level 0 reserved instructions will cause a general protection fault (GPF). CauseWay emulates the four instructions MOV EAX,CR0; MOV CR0,EAX; MOV EAX,CR3; and MOV CR3,EAX in the GPF handler so that they may be used by an application. </P>
+<P>CauseWay will match a DPMI 0A00h function call with target string RATIONAL/4G. This in conjunction with CR0 emulation allows support of floating point emulation by an exception handler. Watcom uses this approach under DOS/4GW operation if the floating point emulation library is not linked in. Note that this routine does not work for either CauseWay or DOS/4GW under a DPMI host such as Windows or OS/2.</P>
+
+<P><A HREF="page_75.htm">Next Page</A></P>
+<P><A HREF="page_73.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

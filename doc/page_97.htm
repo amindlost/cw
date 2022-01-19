@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 97
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_97"></A>
+<B><P>03 - Non-standard protected mode program already active.</P>
+
+</B><P>Generated if the system is already operating under the control of another protected mode program which doesn't conform to either VCPI or DPMI standards. Identify and remove the other application before running the CauseWay application.</P>
+
+<B><P>04 - DOS 3.1 or better required.</P>
+
+</B><P>Generated if DOS version is less than 3.1. You need to upgrade the machine's DOS version or use another machine to operate the CauseWay application.</P>
+
+<B><P>05 - Not enough memory for CauseWay.</P>
+
+</B><P>Generated if the system doesn't have enough free physical memory to initialize the CauseWay kernel code and data. Free additional memory before running the CauseWay application. The memory can be any of the extended or conventional types supported by CauseWay.</P>
+
+<B><P>06 - VCPI failed to switch into protected mode.</P>
+
+</B><P>Generated if a VCPI server is detected and the server fails to switch into protected mode when requested. The only likely cause of this error is a corrupted system. Reboot the system and try again.</P>
+
+<B><P>07 - Unable to control A20.</P>
+
+</B><P>Generated if CauseWay detects an A20 line that doesn't respond to the normal control methods. This may indicate either a hardware fault or a nonstandard system. There is no software solution for these hardware problems. Installing an XMS driver such as HIMEM.SYS should address nonstandard systems.</P>
+
+<B><P>08 - Selector allocation error.</P>
+
+</B><P>Generated if DPMI refuses to allocate enough selectors for CauseWay to function. Remove one or more programs that are also using DPMI.</P>
+
+<P><A HREF="page_98.htm">Next Page</A></P>
+<P><A HREF="page_96.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

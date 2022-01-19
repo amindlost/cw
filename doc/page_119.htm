@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 119
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_119"></A>
+<B><P>GDT</P>
+
+</B><P>Global Descriptor Table. 80386 and above chips provide three types of descriptor tables when in protected mode. The GDT is the primary table intended for segments used by the operating system. It is the only descriptor table that can contain call and interrupt gates, and other system type selectors. The GDT is not affected by task switch instructions, that is, it is available to all processes in an multi- tasking environment. There is one and only one GDT in protected mode.</P>
+
+<B><P>GPF</P>
+</B><P>General Protection Fault. See Fault.</P>
+<B><P>INT 15h</P>
+
+</B><P>Miscellaneous BIOS functions API. One of these functions is reporting the amount of physical memory present in a machine.</P>
+
+<B><P>INT 31h</P>
+
+</B><P>The DPMI API interrupt. DPMI and CauseWay services are provided via this interrupt.</P>
+
+<B><P>LDT</P>
+
+</B><P>Local Descriptor Table. The LDT holds segment descriptors much as the Global Descriptor Table (GDT), except that LDT descriptors are available only to tasks using that particular LDT. The LDT is loaded from a task's state segment when task switch instructions are executed so each task can have its own LDT in a multi-tasking environment. There can be more than one or no LDTs at all present in protected mode.</P>
+
+<B><P>Normalizing</B> (a pointer)</P>
+
+<P>In real mode, 4096 segment values with differing offsets can be used to address the same memory address, e.g. 5000:213h and 5020:13h. Converting to the largest possible segment value and the smallest offset value (in the range 0 to 0fh) is called normalizing, e.g. 5021:3h. When normalizing a pointer, use the largest possible segment value and the smallest possible offset value. Protected mode does not support normalizing pointers because it performs arithmetic on selector values. Libraries and routines which normalize pointers will need to be modified to work with CauseWay by removing the normalization code.</P>
+
+<P><A HREF="page_120.htm">Next Page</A></P>
+<P><A HREF="page_118.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

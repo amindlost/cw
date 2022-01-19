@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 68
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_68"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>SetRVect</B> Set real mode interrupt handler address.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0201h</P>
+<P>BL= Interrupt vector number.</P>
+<P>CX:DX = selector:offset of new handler.</P>
+<P>Outputs: None.</P>
+<P>Errors: None.</P>
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>SetSelDet</B> Set selector linear base and limit.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff09h</P>
+<P>BX = Selector.</P>
+<P>CX:DX = Linear base.</P>
+<P>SI:DI = Byte granular limit.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX, this function returns with carry set.</P>
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>SetSelDet32</B> Set selector linear base and limit.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff0ah</P>
+<P>BX = Selector.</P>
+<P>EDX = Linear base.</P>
+<P>ECX = Byte granular limit.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX, this function returns with carry set.</P>
+
+</FONT>
+
+<P><A HREF="page_69.htm">Next Page</A></P>
+<P><A HREF="page_67.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

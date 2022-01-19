@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 13
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_13"></A>
+<B>PRE:<I>nnn</I></B><BLOCKQUOTE>Pre-allocates a swap file size, under non-DPMI environments, at start-up. <I>nnn</I> is file size in megabytes, not kilobytes (same as MAXMEM).
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+There are at least two uses for this feature. First, to pre-allocate a virtual memory file size for applications with a total memory allocation (including EXE image) that does not exceed the set size. For example:
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+</FONT><FONT FACE="Courier" SIZE=3>SET CAUSEWAY=PRE:4
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+</FONT><FONT SIZE=3>pre-allocates a virtual memory file of 4M. If an enduser resets or powers off the computer while the application is running and virtual memory is in use, the enduser's machine will not have lost clusters. There is only a 4M temporary file to find and erase. If virtual memory usage exceeds 4M, then SCANDISK must be used to recover lost clusters above and beyond what was pre-allocated.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+Secondly, PRE can be used to allow your application to stake a claim to disk space before it needs it.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+PRE may be used in conjunction with MAXMEM to ensure that virtual memory does not exceed the pre-allocation setting.
+</BLOCKQUOTE>
+
+<B>SWAP:<I>path</I></B><BLOCKQUOTE>Set CauseWay's virtual memory manager swap file path. This path takes precedence for choosing the location of a swap file over the TEMP and TMP environment variables.
+</BLOCKQUOTE>
+
+<P><A HREF="page_14.htm">Next Page</A></P>
+<P><A HREF="page_12.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

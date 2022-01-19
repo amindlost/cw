@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 58
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_58"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>LockMem</B> Lock a region of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff1bh</P>
+<P>BX:CX = Starting linear address of memory to lock.</P>
+<P>SI:DI = Size of region to lock in bytes.</P>
+<P>Outputs: Carry set on error.</P>
+
+<P>Errors: If any of the region specified is invalid or if not enough physical memory is available to fill the region specified, then none of the memory is locked and this function returns carry set.</P>
+<P>Notes: Memory that is locked cannot be swapped to disk by the VMM. Locking applies to memory on 4K boundaries. Therefore, areas of memory below and above the memory being locked are locked if the specified region is not aligned to a 4K boundary.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=396>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>LockMem32 </B>Lock a region of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff1ch</P>
+<P>ESI = Starting linear address of memory to lock.</P>
+<P>ECX = Size of region to lock in bytes.</P>
+<P>Outputs: Carry set on error.</P>
+<P>Errors: See LockMem.</P>
+
+<P>Notes: Memory that is locked cannot be swapped to disk by the VMM. Locking applies to memory on 4K boundaries. Therefore, areas of memory below and above the memory being locked are locked if the specified region is not aligned to a 4K boundary.</P>
+</FONT>
+
+<P><A HREF="page_59.htm">Next Page</A></P>
+<P><A HREF="page_57.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

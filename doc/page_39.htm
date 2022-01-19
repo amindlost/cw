@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 39
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_39"></A>
+<P ALIGN=CENTER><FONT SIZE=3><B>Chapter 8:&nbsp;&nbsp;&nbsp;SPEED CONSIDERATIONS</B></FONT></P>
+<FONT SIZE=3><P>There are a few ways to speed up linking programs with WL32 as well as to increase the operational efficiency of your CauseWay applications.</P>
+<B><P>MEMORY SIZE</P>
+</B><P>Almost without exception, the best way to increase runtime performance of all CauseWay applications is to ensure that physical memory is large enough to meet all of the program's needs. Performance suffers when CauseWay creates a temporary file for virtual memory, swapping 4K blocks of the program's code and data to and from disk. Naturally this may not be possible in all cases, but it is a worthy goal. Generally the more physical memory, even when virtual memory is being used, the better an application's performance.</P>
+<P>When using a disk cache program, be sure not to use too much extended memory. Although a disk cache program is beneficial, allocating it too much memory can deprive CauseWay of required extended memory and can degrade application performance.</P>
+<P>If your program uses virtual memory, CauseWay's VMM creates a temporary swap file. If you have more than one disk drive, then you may wish to direct creation of the swap file to the faster disk drive on your system using the CauseWay=SWAP TEMP or TMP environment variables. Do not create a RAM disk if this will lower your physical memory because this is less efficient than allowing CauseWay to use physical memory itself.</P>
+<P>Remember that virtual memory is part of total memory when using CauseWay. If your default drive, or the drive pointed to by the TEMP or TMP environment variables has little free space, this will be reflected in total memory available to the CauseWay application. If disk free space is less than physical memory, then CauseWay shuts off all use of virtual memory. Windows and OS/2 handle virtual memory internally and supply it through the swap file and DPMI settings for the application.</P>
+
+<P><A HREF="page_40.htm">Next Page</A></P>
+<P><A HREF="page_38.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

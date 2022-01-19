@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 77
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_77"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>INT 23h Control-C Handler Address</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This interrupt is always reflected back to the protected mode handler to ensure the CauseWay application can handle it correctly. The default handler aborts the application in the same manner as DOS. If you need to terminate your application in your own handler, perform an INT 21h AH=4ch as normal.</P>
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>INT 24h Critical Error Handler Address</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>This interrupt is always reflected back to the protected mode handler to ensure the CauseWay application can handle it correctly. The default handler behaves in the same way as the DOS handler and it aborts your application, if appropriate. If you install your own handler, all memory accessed by this interrupt as code or data must be locker.</P>
+<P>The register values normally placed on the stack by DOS before entry to the interrupt handler are not present in protected mode. Only the register values are valid. You may terminate your application from within this interrupt with INT 21h, AH=4ch as normal.</P>
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>INT 33h</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>09h [E]DX instead of DX</P>
+<P>0Ch [E]DX instead of DX</P>
+<P>16h [E]DX instead of DX</P>
+<P>17h [E]DX instead of DX</P>
+<B><P>NOTES: </P>
+</B><P>With the exception of software interrupts that require segment pointers as parameters, all interrupts can be issued as normal. The most common interrupt APIs that require segment pointers are intercepted by CauseWay to provide normal access to these services. Any other real mode interrupt services that require segment pointers can be accessed using CauseWay’s simulated real mode interrupt/far call services.</P>
+
+<P><A HREF="page_78.htm">Next Page</A></P>
+<P><A HREF="page_76.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

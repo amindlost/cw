@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 49
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_49"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>GetCallBack </B>Allocate real mode call back address.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0303h</P>
+<P>DS:[E]SI = Call address.</P>
+<P>ES:[E]DI = Real mode register structure.</P>
+<P>Outputs: Carry set on error, else,</P>
+<P>CX:DX = Real mode address to trigger mode switch.</P>
+
+
+
+<P>Errors: Call-backs are a limited resource. Normally only 16 are available per virtual machine. Use them carefully and release them as soon as they are no longer required.</P>
+
+
+
+<P>Call-Back:Interrupts disabled.</P>
+<P>DS:[E]SI = Selector:Offset of real mode SS:SP.</P>
+<P>ES:[E]DI = Selector:Offset of real mode call structure.</P>
+<P>SS:[E]SP = Locked protected mode stack.</P>
+<P>All other registers undefined</P>
+
+
+
+<P>To return from call-back procedure, execute an IRET to return.</P>
+<P>ES:[E]DI = Selector:Offset of real mode call structure to restore.</P>
+<P>Notes: Real mode call-backs provide a means of switching from real mode to protected mode. This function returns a unique real mode address that when given control in real mode, switches to protected mode and passes control to the protected mode routine supplied at entry to this function. On entry to the protected mode code the real mode register structure contains all the real mode register values.</P>
+
+</FONT>
+
+<P><A HREF="page_50.htm">Next Page</A></P>
+<P><A HREF="page_48.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 15
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_15"></A>
+<I><P>library_files</I> indicates a list of one or more library file names. WL32 uses a default extension of .LIB for library files if none is given. You can override the default extension by explicit use of a different extension in the file name.</P>
+<P>When entering more than one file name type, you must use commas as shown. They are not optional. For example, when specifying a program name and library name without a map file name, use two commas to separate the file names. However, do not use commas as separators between the same file types. In other words, do not place commas between multiple object module file names or multiple library file names.</P>
+<B><P>NOTES</P>
+</B><P>It is possible to override the default link format through use of the FREEFORMAT morphing command in a configuration definitions file. Refer to the <I>Configuration Files</I> chapter for more information.</P>
+<P>The message "Link of executable file successfully completed" appears at the end of the link if errors did not occur during linking. If a link error does occur, the application's executable and map file are deleted.</P>
+<P>Warnings during the link are NOT the same as errors. Instead, they are an indication that the linker has encountered an unusual situation which could lead to a problem when operating the linked program. Warnings do not abort the link process and the success message appears even if warnings are present. The total number of warnings will be displayed by WL32 at the end of the link if any warnings do occur.</P>
+<P>WL32 automatically zeroes the CodeView segments $$TYPE and $$SYMBOL in a program so that they don't bulk up EXE size or disk space unnecessarily when debug code is linked in.</P>
+
+<P><A HREF="page_16.htm">Next Page</A></P>
+<P><A HREF="page_14.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

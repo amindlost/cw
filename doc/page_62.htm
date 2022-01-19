@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 62
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_62"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>RelSel</B> Release a selector.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff04h</P>
+<P>BX = Selector.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX, this function returns with carry set.</P>
+<P>Notes: Use this function to release selectors allocated by GetSel or AliasSel.</P>
+
+
+</FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=390>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3><B>ResMem</B> Resize a previously allocated block of memory.</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Inputs: AX = 0ff0dh</P>
+<P>BX = Selector for block.</P>
+<P>CX:DX = New size of block required in bytes.</P>
+<P>Outputs: Carry set on error.</P>
+
+
+
+<P>Errors: If an invalid selector is passed in BX or not enough memory is available when increasing the block size, then this function returns carry set.</P>
+<P>Notes: If the memory block cannot be resized in its current location, but a free block of memory of the new size exists, the memory is copied to a new block and the old one is released. The application is not affected as long as only the selector originally allocated with GetMem accesses the memory.</P>
+</FONT>
+
+<P><A HREF="page_63.htm">Next Page</A></P>
+<P><A HREF="page_61.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

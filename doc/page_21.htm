@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 21
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_21"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>ISLIB</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Force an object module to be linked as a library file. This command is useful for switching library files in the object module list back to library status.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;file name&gt;=LIBADD</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify a library file to be linked into a program whenever the configuration definitions file is used. The library file will be added to the library file list as soon as it is encountered in the configuration file. If the library file is not present in the current directory or cannot be found in a directory listed via the LIB environment variable, WL32 terminates with a <B>file not found</B> error.</P>
+<P>This command is most useful for languages which need replacement libraries to be used with the DOS extender. </P>
+<P>Multiple LIBADD morphing commands are supported by WL32.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;string&gt;=LIBNAME</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify a string when in freeformat mode that instructs WL32 to begin parsing a list of library files. The following three commands are commonly used in a definitions file with freeformat link files:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>LIB[RARY]=LIBNAME</P>
+<P>SEA[RCH]=LIBNAME</P>
+<P>ALL[OCATE]=LIBNAME</P>
+</FONT><FONT SIZE=3><P>Multiple LIBNAME morphing commands are supported by WL32.</P>
+
+<P><A HREF="page_22.htm">Next Page</A></P>
+<P><A HREF="page_20.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

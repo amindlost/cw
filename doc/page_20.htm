@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 20
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_20"></A>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;file name&gt;=FILEDELETE</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify a file that will be removed from the link process if it is encountered in a link file or command line. The file will be deleted even if it is listed in the link file with a drive or directory specification. Do not list &lt;file name&gt; with a drive or directory specification. </P>
+<P>&lt;file name&gt; must contain an extension if the file to be removed has either an explicit or default extension.</P>
+<P>This command is most useful for removing superfluous object modules or libraries from link files without directly editing them. For example, overlay managers and libraries are not needed with the DOS extender and will only add unnecessary code to the program. The following command will remove a file called OVLMGR.OBJ from the link process:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>OVLMGR.OBJ=FILEDELETE</P>
+</FONT><FONT SIZE=3><P>Multiple FILEDELETE morphing commands are supported by WL32.</P>
+
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>FREEFORMAT</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Switch the linker into freeformat parsing mode used by the RTLink and PLink linkers, as opposed to the positional format used by WarpLink, Microsoft Link, and TLink. You cannot switch back to positional parsing mode after entering freeformat. Several linker definition commands are only valid for freeformat mode.</P></FONT>
+<TABLE BORDER CELLSPACING=2 CELLPADDING=8 WIDTH=400>
+<TR><TD VALIGN="TOP">
+<P><FONT SIZE=3>&lt;character&gt;=IGNORE</FONT></TD>
+</TR>
+</TABLE>
+
+<FONT SIZE=3><P>Specify one character to ignore when adjacent to or part of a file name in a linker response file or command line. This command allows ignoring parentheses or brackets around overlaid file names without modifying the script file. The following two commands are commonly used with the IGNORE command for Microsoft Link and WarpLink overlaid files:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>(=IGNORE</P>
+<P>)=IGNORE</P>
+</FONT><FONT SIZE=3><P>Up to 16 ignore characters can be specified in separate lines. After 16 ignore characters are processed in the definitions file, the 17th character listed overwrites the first ignore character specified, and so on.</P></FONT>
+
+<P><A HREF="page_21.htm">Next Page</A></P>
+<P><A HREF="page_19.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>

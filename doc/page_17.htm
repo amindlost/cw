@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE>
+CauseWay for Watcom C/C++ &amp; Assembly Language: Manual Page 17
+
+</TITLE>
+</HEAD>
+<BODY>
+<A NAME="Page_17"></A>
+<P>For example, the following response file:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>MYFILE1+</P>
+<P>MYFILE2</P>
+<P>MYFILE3</P>
+</FONT><FONT SIZE=3><P>causes WL32 to link MYFILE1.OBJ and MYFILE2.OBJ into MYFILE3.EXE because the MYFILE2 line does not end of with the plus sign. The same effect can be achieved by this response file:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>MYFILE1+</P>
+<P>MYFILE2,MYFILE3</P>
+</FONT><FONT SIZE=3><P>In contrast, the following response file:</P>
+</FONT><FONT FACE="Courier" SIZE=3><P>MYFILE1+</P>
+<P>MYFILE2+</P>
+<P>MYFILE3</P>
+</FONT><FONT SIZE=3><P>links together MYFILE1.OBJ, MYFILE2.OBJ, and MYFILE3.OBJ to create MYFILE1.EXE because of a trailing plus sign after MYFILE2.</P>
+<P>When linking with response files, you must specify the file extension if one is required. WL32 does not assume a .LNK or .RSP file extension. However, by using a configuration definitions file command you may specify a default response file extension. Refer to the <I>Configuration Files</I> chapter for more information.</P>
+<P>If a response file is not found in the current directory, WL32 will search the LIB environment variable directories for the response file. </P>
+<P><B>COMMENTS IN A RESPONSE FILE</B></P>
+<P>You can add comments to WL32's response files for documentation purposes. Use the pound sign (#) to insert comments into a response file. Two slash (//) characters also may be used to indicate a comment. All characters on a line after the pound sign or slashes are ignored by WL32. The comment indicator can be modified from a pound sign to a different character using a configuration definitions file command. Read the <I>Configuration Files</I> chapter for more information.</P>
+
+<P><A HREF="page_18.htm">Next Page</A></P>
+<P><A HREF="page_16.htm">Previous Page</A></P>
+<P><A HREF="page_iii.htm">Go to Table of Contents</A></P>
+<ALIGN=LEFT><A HREF="/index.htm"><IMG SRC="/cyanhome.gif" ALIGN=BOTTOM>
+Go back to <I>Devore Software & Consulting</I> home page</A>
+
+</BODY>
+</HTML>
